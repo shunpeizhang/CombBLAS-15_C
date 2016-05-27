@@ -106,9 +106,9 @@ int main(int argc, char* argv[])
         {
 		if(myrank == 0)
 		{	
-                	cout << "Usage: ./mcl <BASEADDRESS> <INFLATION> <PRUNELIMIT>" << endl;
-                	cout << "Example: ./mcl Data/ 2 0.00001" << endl;
-                	cout << "Input file input.txt should be under <BASEADDRESS> in triples format" << endl;
+			                    cout << "Usage: ./mcl <BASEADDRESS> <INFLATION> <PRUNELIMIT>" << endl;
+			                	cout << "Example: ./mcl Data/ 2 0.00001" << endl;
+			                	cout << "Input file input.txt should be under <BASEADDRESS> in triples format" << endl;
                 }
 		MPI_Finalize(); 
 		return -1;
