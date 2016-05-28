@@ -7,6 +7,8 @@ ADD_EXECUTABLE( dobfs DirOptBFS.cpp )
 ADD_EXECUTABLE( fbfs FilteredBFS.cpp )
 ADD_EXECUTABLE( fmis FilteredMIS.cpp )
 
+ADD_EXECUTABLE( ppcl PPCL.cpp )
+
 
 TARGET_LINK_LIBRARIES( mcl CommGridlib MPITypelib MemoryPoollib Hashlib)
 TARGET_LINK_LIBRARIES( betwcent CommGridlib MPITypelib MemoryPoollib Hashlib)
@@ -15,4 +17,5 @@ TARGET_LINK_LIBRARIES( dobfs CommGridlib MPITypelib MemoryPoollib GraphGenlib Ha
 TARGET_LINK_LIBRARIES( fbfs CommGridlib MPITypelib MemoryPoollib GraphGenlib Hashlib)
 TARGET_LINK_LIBRARIES( fmis CommGridlib MPITypelib MemoryPoollib GraphGenlib Hashlib)
 
+TARGET_LINK_LIBRARIES( ppcl CommGridlib MPITypelib MemoryPoollib GraphGenlib Hashlib)
 
