@@ -1,2 +1,0 @@
-/usr/bin/ar cr libCommGridlib.a  CMakeFiles/CommGridlib.dir/CommGrid.o
-/usr/bin/ranlib libCommGridlib.a
