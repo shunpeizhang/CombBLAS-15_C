@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/allenzou/git/CombBLAS
+CMAKE_SOURCE_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/allenzou/git/CombBLAS
+CMAKE_BINARY_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -82,9 +82,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles /home/allenzou/git/CombBLAS/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -723,6 +723,19 @@ mcl/fast:
 .PHONY : mcl/fast
 
 #=============================================================================
+# Target rules for targets named ppcl
+
+# Build rule for target.
+ppcl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ppcl
+.PHONY : ppcl
+
+# fast build rule for target.
+ppcl/fast:
+	$(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/build
+.PHONY : ppcl/fast
+
+#=============================================================================
 # Target rules for targets named tdbfs
 
 # Build rule for target.
@@ -864,6 +877,7 @@ help:
 	@echo "... fbfs"
 	@echo "... fmis"
 	@echo "... mcl"
+	@echo "... ppcl"
 	@echo "... tdbfs"
 	@echo "... GraphGenlib"
 	@echo "... CommGrid.o"

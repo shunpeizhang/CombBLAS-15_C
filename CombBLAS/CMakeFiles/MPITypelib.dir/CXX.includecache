@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/allenzou/git/CombBLAS/MPIType.cpp
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.cpp
 iostream
 -
 mpi.h
 -
 MPIType.h
-/home/allenzou/git/CombBLAS/MPIType.h
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.h
 
-/home/allenzou/git/CombBLAS/MPIType.h
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.h
 iostream
 -
 typeinfo

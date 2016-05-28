@@ -1,4 +1,4 @@
-# Install script for directory: /home/allenzou/git/CombBLAS
+# Install script for directory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,9 +34,9 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/allenzou/git/CombBLAS/ReleaseTests/cmake_install.cmake")
-  INCLUDE("/home/allenzou/git/CombBLAS/Applications/cmake_install.cmake")
-  INCLUDE("/home/allenzou/git/CombBLAS/graph500-1.2/generator/cmake_install.cmake")
+  INCLUDE("/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests/cmake_install.cmake")
+  INCLUDE("/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/Applications/cmake_install.cmake")
+  INCLUDE("/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -46,7 +46,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/allenzou/git/CombBLAS/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/allenzou/git/CombBLAS/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

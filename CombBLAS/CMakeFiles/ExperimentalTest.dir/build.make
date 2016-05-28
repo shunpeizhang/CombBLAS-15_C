@@ -38,10 +38,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/allenzou/git/CombBLAS
+CMAKE_SOURCE_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/allenzou/git/CombBLAS
+CMAKE_BINARY_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 # Utility rule file for ExperimentalTest.
 
@@ -64,6 +64,6 @@ CMakeFiles/ExperimentalTest.dir/clean:
 .PHONY : CMakeFiles/ExperimentalTest.dir/clean
 
 CMakeFiles/ExperimentalTest.dir/depend:
-	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS/CMakeFiles/ExperimentalTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/ExperimentalTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalTest.dir/depend
 

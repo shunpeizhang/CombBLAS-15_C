@@ -1,4 +1,4 @@
-# Install script for directory: /home/allenzou/git/CombBLAS/ReleaseTests
+# Install script for directory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

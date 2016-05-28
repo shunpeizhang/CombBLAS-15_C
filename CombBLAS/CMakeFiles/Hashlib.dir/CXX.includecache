@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/allenzou/git/CombBLAS/hash.cpp
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/hash.cpp
 stdint.h
 -
 cstring
 -
 hash.hpp
-/home/allenzou/git/CombBLAS/hash.hpp
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/hash.hpp
 
-/home/allenzou/git/CombBLAS/hash.hpp
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/hash.hpp
 stdint.h
 -
 

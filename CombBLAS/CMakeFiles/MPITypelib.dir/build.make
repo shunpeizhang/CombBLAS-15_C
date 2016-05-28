@@ -38,10 +38,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/allenzou/git/CombBLAS
+CMAKE_SOURCE_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/allenzou/git/CombBLAS
+CMAKE_BINARY_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MPITypelib.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/MPITypelib.dir/flags.make
 
 CMakeFiles/MPITypelib.dir/MPIType.o: CMakeFiles/MPITypelib.dir/flags.make
 CMakeFiles/MPITypelib.dir/MPIType.o: MPIType.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MPITypelib.dir/MPIType.o"
-	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MPITypelib.dir/MPIType.o -c /home/allenzou/git/CombBLAS/MPIType.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MPITypelib.dir/MPIType.o -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.cpp
 
 CMakeFiles/MPITypelib.dir/MPIType.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MPITypelib.dir/MPIType.i"
-	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/allenzou/git/CombBLAS/MPIType.cpp > CMakeFiles/MPITypelib.dir/MPIType.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.cpp > CMakeFiles/MPITypelib.dir/MPIType.i
 
 CMakeFiles/MPITypelib.dir/MPIType.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MPITypelib.dir/MPIType.s"
-	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/allenzou/git/CombBLAS/MPIType.cpp -o CMakeFiles/MPITypelib.dir/MPIType.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.cpp -o CMakeFiles/MPITypelib.dir/MPIType.s
 
 CMakeFiles/MPITypelib.dir/MPIType.o.requires:
 .PHONY : CMakeFiles/MPITypelib.dir/MPIType.o.requires
@@ -101,6 +101,6 @@ CMakeFiles/MPITypelib.dir/clean:
 .PHONY : CMakeFiles/MPITypelib.dir/clean
 
 CMakeFiles/MPITypelib.dir/depend:
-	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS/CMakeFiles/MPITypelib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MPITypelib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MPITypelib.dir/depend
 

@@ -74,7 +74,7 @@ double Inflate(Dist<double>::MPI_DCCols & A, double power)
 	A.Apply(bind2nd(exponentiate(), power));
 	{
 		// Reduce (Column): pack along the columns, result is a vector of size n
-		Dist<double>::MPI_DenseVec colsums = A.Reduce(Column, plus<double>(), 0.0);			
+		Dist<double>::MPI_DenseVec colsums = A.Reduce(Column, plus<double>(), 0.0);
 		colsums.Apply(safemultinv<double>());
 		A.DimApply(Column, colsums, multiplies<double>());	// scale each "Column" with the given vector
 

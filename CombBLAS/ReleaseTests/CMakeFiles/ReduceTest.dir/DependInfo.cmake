@@ -4,16 +4,16 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allenzou/git/CombBLAS/ReleaseTests/ReduceTest.cpp" "/home/allenzou/git/CombBLAS/ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.o"
+  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests/ReduceTest.cpp" "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/allenzou/git/CombBLAS/CMakeFiles/CommGridlib.dir/DependInfo.cmake"
-  "/home/allenzou/git/CombBLAS/CMakeFiles/MPITypelib.dir/DependInfo.cmake"
-  "/home/allenzou/git/CombBLAS/CMakeFiles/MemoryPoollib.dir/DependInfo.cmake"
-  "/home/allenzou/git/CombBLAS/CMakeFiles/Hashlib.dir/DependInfo.cmake"
+  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CommGridlib.dir/DependInfo.cmake"
+  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MPITypelib.dir/DependInfo.cmake"
+  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MemoryPoollib.dir/DependInfo.cmake"
+  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/Hashlib.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

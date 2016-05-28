@@ -1,4 +1,4 @@
-# Install script for directory: /home/allenzou/git/CombBLAS/graph500-1.2/generator
+# Install script for directory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

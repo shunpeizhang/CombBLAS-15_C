@@ -6,16 +6,7 @@
  */
 
 #include <mpi.h>
-
-// These macros should be defined before stdint.h is included
-#ifndef __STDC_CONSTANT_MACROS
-#define __STDC_CONSTANT_MACROS
-#endif
-#ifndef __STDC_LIMIT_MACROS
-#define __STDC_LIMIT_MACROS
-#endif
 #include <stdint.h>
-
 #include <sys/time.h>
 #include <iostream>
 #include <fstream>
@@ -43,27 +34,35 @@ public:
 void Interpret(const Dist<double>::MPI_DCCols & A)
 {
 	// Placeholder
+	return;
 }
 
-Dist<double>::MPI_DCCols Update_vote(const Dist<double>::MPI_DCCols & A,const Dist<double>::MPI_DCCols & C,double p)
+/*
+passing ‘const MPI_DCCols {aka const SpParMat<int, double, SpDCCols<int, double> >}’ as ‘this’ argument of ‘void SpParMat<IT, NT, DER>::DimApply(Dim, const FullyDistVec<IT, NT>&, _BinaryOperation) [with _BinaryOperation = std::multiplies<double>; IT = int; NT = double; DER = SpDCCols<int, double>]’ discards qualifiers [-fpermissive]
+*/
+
+Dist<double>::MPI_DCCols Update_vote(Dist<double>::MPI_DCCols & A,Dist<double>::MPI_DCCols & C,double p)
 {
-	Dist<double>::MPI_DenseVec rowsums = C.Reduce(Row , plus<double>(), 0.0);
+	
+	Dist<double>::MPI_DenseVec rowsums = C.Reduce(Row,plus<double>(), 0.0);
 	rowsums.Apply(safemultinv<double>());
-	Dist<double>::MPI_DCCols C_tem1= C.DimApply(Row ,rowsums, multiplies<double>());	// scale each "Row" with the given vector
-	Dist<double>::MPI_DCCols C_tem2 = C_tem1.Apply(bind2nd(exponentiate(), p));
-	Dist<double>::MPI_DenseVec C_tem3 = C_tem2.Reduce(Column, plus<double>(), 0.0);
-	A.DimApply(Row ,C_tem3, multiplies<double>());
+	C.DimApply(Row,rowsums, multiplies<double>());	// scale each "Row" with the given vector
+	C.Apply(bind2nd(exponentiate(), p));
+	Dist<double>::MPI_DenseVec temp = C.Reduce(Column, plus<double>(), 0.0);
+	A.DimApply(Row ,temp, multiplies<double>());
 	return A;
 }
 
 double Set_p(const Dist<double>::MPI_DCCols & C)
 {
 	// Placeholder
+	return 0.0;
 }
 
 Dist<double>::MPI_DCCols Settling_ties(const Dist<double>::MPI_DCCols & C)
 {
 	// Placeholder
+	return C;
 }
 
 int main(int argc, char* argv[])
@@ -75,28 +74,34 @@ int main(int argc, char* argv[])
 	MPI_Comm_rank(MPI_COMM_WORLD,&myrank);
 	typedef PlusTimesSRing<double, double> PTDOUBLEDOUBLE;
 	if(argc < 2)
-        {
+	{
 		if(myrank == 0)
 		{
                 	cout << "Usage: ./ppcl <BASEADDRESS> " << endl;
                 	cout << "Example: ./ppcl Data/  " << endl;
                 	cout << "Input file input.txt should be under <BASEADDRESS> in triples format" << endl;
-                }
+        }
 		MPI_Finalize();
 		return -1;
-        }
+    }
 
 	{
 		string directory(argv[1]);
 		string ifilename1 = "input.txt";
-		string ifilename2 = "input_unit.txt"
+		string ifilename2 = "input_unit.txt";
 		ifilename1 = directory+"/"+ifilename1;
 		ifilename2 = directory+"/"+ifilename2;
 
-		Dist<double>::MPI_DCCols A;	// construct object
-		Dist<double>::MPI_DCCols C;
-		A.ReadDistribute(ifilename1, 0);	// read it from file
-		C.ReadDistribute(ifilename2, 0)
+		MPI_Barrier(MPI_COMM_WORLD);	
+
+		shared_ptr<CommGrid> fullWorld;
+		fullWorld.reset( new CommGrid(MPI_COMM_WORLD, 0, 0) );
+		Dist<double>::MPI_DCCols A(fullWorld);	// construct object
+		Dist<double>::MPI_DCCols C(fullWorld);
+
+		A.ReadDistribute(ifilename1,0);	// read it from file
+		C.ReadDistribute(ifilename2,0);    
+
 
 		// Reduce (Row): pack along the rows, result is a vector of size n
 		Dist<double>::MPI_DenseVec rowsums = A.Reduce(Row, plus<double>(), 0.0);
@@ -109,9 +114,9 @@ int main(int argc, char* argv[])
 					double t1 = MPI_Wtime();
 					Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
 					Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
-					Dist<double>::MPI_DCCols  C = T.DimApply(Column, colmaxs, equal_to<double>());
+					T.DimApply(Column, colmaxs, equal_to<double>());
 
-					Dist<double>::MPI_DCCols Cf  = Settling_ties(C);  //Settling ties in C
+					Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
 
 					if (Cf == C)
 						flag = 0;
@@ -130,17 +135,4 @@ int main(int argc, char* argv[])
 	MPI_Finalize();
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

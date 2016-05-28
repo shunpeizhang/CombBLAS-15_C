@@ -319,3 +319,35 @@ Linking CXX executable cmTryCompileExec4034358832
 make[1]:正在离开目录 `/home/allenzou/git/CombBLAS/CMakeFiles/CMakeTmp'
 
 
+Determining if the CXX compiler accepts the flag -std=c++11 -std=c++14 passed with the following output:
+Change Dir: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3801855486/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3801855486.dir/build.make CMakeFiles/cmTryCompileExec3801855486.dir/build
+make[1]: Entering directory `/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3801855486.dir/DummyCXXFile.cxx.o
+/usr/bin/mpicxx    -std=c++11 -std=c++14   -o CMakeFiles/cmTryCompileExec3801855486.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-2.8/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTryCompileExec3801855486
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3801855486.dir/link.txt --verbose=1
+/usr/bin/mpicxx    -std=c++11 -std=c++14    CMakeFiles/cmTryCompileExec3801855486.dir/DummyCXXFile.cxx.o  -o cmTryCompileExec3801855486 -rdynamic 
+make[1]: Leaving directory `/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp'
+
+
+Determining if the CXX compiler accepts the flag -std=c++11 -std=c++14 passed with the following output:
+Change Dir: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2265118157/fast"
+make[1]: Entering directory `/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2265118157.dir/build.make CMakeFiles/cmTryCompileExec2265118157.dir/build
+make[2]: Entering directory `/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2265118157.dir/DummyCXXFile.cxx.o
+/usr/bin/mpicxx    -std=c++11 -std=c++14   -o CMakeFiles/cmTryCompileExec2265118157.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-2.8/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTryCompileExec2265118157
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2265118157.dir/link.txt --verbose=1
+/usr/bin/mpicxx    -std=c++11 -std=c++14    CMakeFiles/cmTryCompileExec2265118157.dir/DummyCXXFile.cxx.o  -o cmTryCompileExec2265118157 -rdynamic 
+make[2]: Leaving directory `/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CMakeTmp'
+
+
