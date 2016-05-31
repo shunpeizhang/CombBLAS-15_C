@@ -1,0 +1,2 @@
+/usr/bin/ar cr libHashlib.a  CMakeFiles/Hashlib.dir/hash.o
+/usr/bin/ranlib libHashlib.a

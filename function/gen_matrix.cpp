@@ -67,9 +67,11 @@ int Gen_Matrix(string filename,int dim )
 	return 0;
 }
 
+#if    0
+
 int main()
 {
 	Gen_Matrix("out",10);
 	return 0;
 }
-
+#endif

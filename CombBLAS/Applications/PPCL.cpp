@@ -1,8 +1,7 @@
 /*
  * PPCL.cpp
- *
  *  Created on: May 26, 2016
- *      Author: allenzou
+ *      Author: allenzou 
  */
 
 #include <mpi.h>
@@ -31,6 +30,17 @@ public:
 };
 
 
+
+bool Compare(pair<int,int> &left, pair<int,int> &right)
+{
+	if(left.second<right.second)
+		return true;
+	else if(left.second==right.second)
+		return (left.first<=right.first)?1:0;	
+	else
+		return false;
+}
+
 void Interpret(const Dist<double>::MPI_DCCols & A)
 {
 	// Placeholder
@@ -42,8 +52,7 @@ passing ‘const MPI_DCCols {aka const SpParMat<int, double, SpDCCols<int, doubl
 */
 
 Dist<double>::MPI_DCCols Update_vote(Dist<double>::MPI_DCCols & A,Dist<double>::MPI_DCCols & C,double p)
-{
-	
+{	
 	Dist<double>::MPI_DenseVec rowsums = C.Reduce(Row,plus<double>(), 0.0);
 	rowsums.Apply(safemultinv<double>());
 	C.DimApply(Row,rowsums, multiplies<double>());	// scale each "Row" with the given vector
@@ -59,9 +68,69 @@ double Set_p(const Dist<double>::MPI_DCCols & C)
 	return 0.0;
 }
 
-Dist<double>::MPI_DCCols Settling_ties(const Dist<double>::MPI_DCCols & C)
+Dist<double>::MPI_DCCols Settling_ties(Dist<double>::MPI_DCCols & C)
 {
 	// Placeholder
+	C.SaveGathered("11.txt");    
+	ifstream inp;
+    inp.open("11.txt");
+    char line[1024];
+    inp.getline(line,1024);
+
+	while(line[0]=='%')
+		inp.getline(line,1024);
+
+    stringstream linestream;
+    linestream<<line;
+    int nrow,ncol,nnz;
+    linestream>>nrow>>ncol>>nnz;
+
+    int precol = -1;
+
+    double val;
+	
+	vector<pair<int,int> > input;
+
+    vector< pair<int,int> > result;
+
+	while(nnz>0 && inp.getline(line,1024))
+    {
+		int row;
+		int col;
+        sscanf(line,"%d %d",&row,&col); 
+		input.push_back(make_pair(row,col));
+        nnz--;
+    }
+	inp.close();
+
+	sort(input.begin(),input.end(),Compare);
+	
+    for(int i=0;i<input.size();i++)
+	{
+        if(precol == -1){
+            precol = input[i].second;
+            result.push_back(make_pair(input[i].first,input[i].second));
+        }
+        else{
+            if( precol != input[i].second){
+                precol = input[i].second;
+                result.push_back(make_pair(input[i].first,input[i].second));
+            }
+        }
+    }
+#if 1
+    ofstream out;
+    out.open("1.txt",ios_base::trunc);
+    out<<nrow<<"  "<<ncol<<"  "<<result.size()<<endl;
+    for(int i=0;i<result.size();i++)
+        out<<result[i].first<<"  "<<result[i].second<<"  1"<<endl;
+    out.close();
+#endif
+
+	C.FreeMemory();
+	string s = "1.txt";
+	C.ReadDistribute(s,0);
+	
 	return C;
 }
 
@@ -77,9 +146,9 @@ int main(int argc, char* argv[])
 	{
 		if(myrank == 0)
 		{
-                	cout << "Usage: ./ppcl <BASEADDRESS> " << endl;
-                	cout << "Example: ./ppcl Data/  " << endl;
-                	cout << "Input file input.txt should be under <BASEADDRESS> in triples format" << endl;
+			cout << "Usage: ./ppcl <BASEADDRESS> " << endl;
+			cout << "Example: ./ppcl Data/  " << endl;
+            cout << "Input file input.txt should be under <BASEADDRESS> in triples format" << endl;
         }
 		MPI_Finalize();
 		return -1;
@@ -100,7 +169,7 @@ int main(int argc, char* argv[])
 		Dist<double>::MPI_DCCols C(fullWorld);
 
 		A.ReadDistribute(ifilename1,0);	// read it from file
-		C.ReadDistribute(ifilename2,0);    
+		C.ReadDistribute(ifilename2,0);
 
 
 		// Reduce (Row): pack along the rows, result is a vector of size n
@@ -111,26 +180,25 @@ int main(int argc, char* argv[])
 		int flag =1;
 		while (flag == 1)
 		{
-					double t1 = MPI_Wtime();
-					Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
-					Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
-					T.DimApply(Column, colmaxs, equal_to<double>());
+			double t1 = MPI_Wtime();
+			Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
+			Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
+			T.DimApply(Column, colmaxs, equal_to<double>());
 
-					Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
+			Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
 
-					if (Cf == C)
-						flag = 0;
-					else
-						p =  Set_p(Cf);
-						A = Update_vote(A,Cf,p);
-					C = Cf;
+			if (Cf == C)
+				flag = 0;
+			else
+				p =  Set_p(Cf);
+				A = Update_vote(A,Cf,p);
+			C = Cf;
 
-					double t2=MPI_Wtime();
-					if(myrank == 0)
-						printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
+			double t2=MPI_Wtime();
+			if(myrank == 0)
+				printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
 		}
 		Interpret(C);
-
 	}
 	MPI_Finalize();
 	return 0;

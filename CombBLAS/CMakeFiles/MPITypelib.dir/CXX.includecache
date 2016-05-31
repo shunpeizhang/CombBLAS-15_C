@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.cpp
+iostream
+-
+mpi.h
+-
+MPIType.h
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.h
+
+/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MPIType.h
+iostream
+-
+typeinfo
+-
+map
+-
+mpi.h
+-
+stdint.h
+-
+

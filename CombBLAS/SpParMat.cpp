@@ -1739,7 +1739,7 @@ void SpParMat< IT,NT,DER >::SaveGathered(string filename, HANDLER handler, bool 
 		out.write(s.c_str(), flinelen);
 		out.close();
 	}
-	int colrank = commGrid->GetRankInProcCol(); 
+	int colrank = commGrid->GetRankInProcCol();
 	int colneighs = commGrid->GetGridRows();
 	IT * locnrows = new IT[colneighs];	// number of rows is calculated by a reduction among the processor column
 	locnrows[colrank] = (IT) getlocalrows();

@@ -58,7 +58,7 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: /usr/bin/mpicxx
+Compiler: /usr/local/bin/mpicxx
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 

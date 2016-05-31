@@ -56,15 +56,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o: 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o: graph500-1.2/generator/btrd_binomial_distribution.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/btrd_binomial_distribution.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/btrd_binomial_distribution.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/btrd_binomial_distribution.c > CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/btrd_binomial_distribution.c > CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/btrd_binomial_distribution.c -o CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/btrd_binomial_distribution.c -o CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/btrd_binomial_distribution.o.requires
@@ -79,15 +79,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.o: graph500-1.2
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.o: graph500-1.2/generator/splittable_mrg.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/splittable_mrg.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/splittable_mrg.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/splittable_mrg.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/splittable_mrg.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/splittable_mrg.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/splittable_mrg.c > CMakeFiles/GraphGenlib.dir/splittable_mrg.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/splittable_mrg.c > CMakeFiles/GraphGenlib.dir/splittable_mrg.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/splittable_mrg.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/splittable_mrg.c -o CMakeFiles/GraphGenlib.dir/splittable_mrg.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/splittable_mrg.c -o CMakeFiles/GraphGenlib.dir/splittable_mrg.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/splittable_mrg.o.requires
@@ -102,15 +102,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.o: graph500-1.
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.o: graph500-1.2/generator/mrg_transitions.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/mrg_transitions.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/mrg_transitions.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/mrg_transitions.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/mrg_transitions.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/mrg_transitions.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/mrg_transitions.c > CMakeFiles/GraphGenlib.dir/mrg_transitions.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/mrg_transitions.c > CMakeFiles/GraphGenlib.dir/mrg_transitions.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/mrg_transitions.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/mrg_transitions.c -o CMakeFiles/GraphGenlib.dir/mrg_transitions.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/mrg_transitions.c -o CMakeFiles/GraphGenlib.dir/mrg_transitions.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/mrg_transitions.o.requires
@@ -125,15 +125,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.o: graph500-1.
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.o: graph500-1.2/generator/graph_generator.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/graph_generator.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/graph_generator.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/graph_generator.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/graph_generator.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/graph_generator.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/graph_generator.c > CMakeFiles/GraphGenlib.dir/graph_generator.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/graph_generator.c > CMakeFiles/GraphGenlib.dir/graph_generator.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/graph_generator.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/graph_generator.c -o CMakeFiles/GraphGenlib.dir/graph_generator.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/graph_generator.c -o CMakeFiles/GraphGenlib.dir/graph_generator.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/graph_generator.o.requires
@@ -148,15 +148,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.o: graph500-1.
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.o: graph500-1.2/generator/permutation_gen.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/permutation_gen.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/permutation_gen.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/permutation_gen.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/permutation_gen.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/permutation_gen.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/permutation_gen.c > CMakeFiles/GraphGenlib.dir/permutation_gen.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/permutation_gen.c > CMakeFiles/GraphGenlib.dir/permutation_gen.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/permutation_gen.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/permutation_gen.c -o CMakeFiles/GraphGenlib.dir/permutation_gen.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/permutation_gen.c -o CMakeFiles/GraphGenlib.dir/permutation_gen.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/permutation_gen.o.requires
@@ -171,15 +171,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.o: graph500-1.2/gen
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.o: graph500-1.2/generator/make_graph.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/make_graph.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/make_graph.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/make_graph.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/make_graph.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/make_graph.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/make_graph.c > CMakeFiles/GraphGenlib.dir/make_graph.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/make_graph.c > CMakeFiles/GraphGenlib.dir/make_graph.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/make_graph.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/make_graph.c -o CMakeFiles/GraphGenlib.dir/make_graph.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/make_graph.c -o CMakeFiles/GraphGenlib.dir/make_graph.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/make_graph.o.requires
@@ -194,15 +194,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.o: graph500-1.2/generato
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.o: graph500-1.2/generator/utils.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/utils.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/utils.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/utils.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/utils.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/utils.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/utils.c > CMakeFiles/GraphGenlib.dir/utils.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/utils.c > CMakeFiles/GraphGenlib.dir/utils.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/utils.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/utils.c -o CMakeFiles/GraphGenlib.dir/utils.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/utils.c -o CMakeFiles/GraphGenlib.dir/utils.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/utils.o.requires
@@ -217,15 +217,15 @@ graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.o: graph500-1.2
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.o: graph500-1.2/generator/scramble_edges.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.o"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/scramble_edges.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/scramble_edges.c
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/GraphGenlib.dir/scramble_edges.o   -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/scramble_edges.c
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphGenlib.dir/scramble_edges.i"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/scramble_edges.c > CMakeFiles/GraphGenlib.dir/scramble_edges.i
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/scramble_edges.c > CMakeFiles/GraphGenlib.dir/scramble_edges.i
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphGenlib.dir/scramble_edges.s"
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/scramble_edges.c -o CMakeFiles/GraphGenlib.dir/scramble_edges.s
+	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator && /usr/local/bin/mpicc  $(C_DEFINES) $(C_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/graph500-1.2/generator/scramble_edges.c -o CMakeFiles/GraphGenlib.dir/scramble_edges.s
 
 graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.o.requires:
 .PHONY : graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/scramble_edges.o.requires
