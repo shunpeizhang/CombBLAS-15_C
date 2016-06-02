@@ -63,8 +63,11 @@ Dist<double>::MPI_DCCols Update_vote(Dist<double>::MPI_DCCols & A,Dist<double>::
 
 double Set_p(const Dist<double>::MPI_DCCols & C)
 {
-	// Placeholder
-	return 1.0;
+	Dist<double>::MPI_DenseVec colsums = C.Reduce(Row, plus<double>(), 0.0);
+	int v = colsums.arr.size();    //此处假设FullyDistVec向量不存储0，且arr.size()为向量中非零值的个数。
+	//未完成函数设定
+	return 1.0；
+
 }
 
 /*Dist<double>::MPI_DCCols Settling_ties(Dist<double>::MPI_DCCols & C)
