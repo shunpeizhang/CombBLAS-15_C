@@ -177,6 +177,14 @@ public:
 		else
 			return SpColIter(NULL, NULL);
 	}
+	//added by peigang,for indicate specified col.
+	SpColIter indicol(int k)
+	{
+		if( nnz >0 )
+			return SpColIter(dcsc->cp + k,dcsc->jc +k);
+		else
+			return SpColIter(NULL, NULL);
+	}
 
 	typename SpColIter::NzIter begnz(const SpColIter & ccol)	//!< Return the beginning iterator for the nonzeros of the current column
 	{
@@ -186,7 +194,13 @@ public:
 	typename SpColIter::NzIter endnz(const SpColIter & ccol)	//!< Return the ending iterator for the nonzeros of the current column
 	{
 		return typename SpColIter::NzIter( dcsc->ir + ccol.colptrnext(), NULL );
-	}			
+	}
+	//added by peigang,for getting second nz
+	typename SpColIter::NzIter secnz(const SpColIter & ccol)	//!< Return the second iterator for the nonzeros of the current column
+	{
+		return typename SpColIter::NzIter( dcsc->ir + ccol.colptr() + 1, dcsc->numx + ccol.colptr() );
+	}
+
 
 	template <typename _UnaryOperation>
 	void Apply(_UnaryOperation __unary_op)
@@ -238,6 +252,8 @@ public:
 	IT getnnz() const { return nnz; }
 	IT getnzc() const { return (nnz == 0) ? 0: dcsc->nzc; }
 	int getnsplit() const { return splits; }
+	//added by peigang,used for PPCL SETTLING TIES
+	IT* getjc() const {return jc;}
 	
 	ofstream& put(ofstream & outfile) const;
 	ifstream& get(ifstream & infile);

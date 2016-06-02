@@ -31,7 +31,7 @@ public:
 
 
 
-bool Compare(pair<int,int> &left, pair<int,int> &right)
+/*bool Compare(pair<int,int> &left, pair<int,int> &right)
 {
 	if(left.second<right.second)
 		return true;
@@ -39,7 +39,7 @@ bool Compare(pair<int,int> &left, pair<int,int> &right)
 		return (left.first<=right.first)?1:0;	
 	else
 		return false;
-}
+}*/
 
 void Interpret(const Dist<double>::MPI_DCCols & A)
 {
@@ -50,7 +50,6 @@ void Interpret(const Dist<double>::MPI_DCCols & A)
 /*
 passing ‘const MPI_DCCols {aka const SpParMat<int, double, SpDCCols<int, double> >}’ as ‘this’ argument of ‘void SpParMat<IT, NT, DER>::DimApply(Dim, const FullyDistVec<IT, NT>&, _BinaryOperation) [with _BinaryOperation = std::multiplies<double>; IT = int; NT = double; DER = SpDCCols<int, double>]’ discards qualifiers [-fpermissive]
 */
-
 Dist<double>::MPI_DCCols Update_vote(Dist<double>::MPI_DCCols & A,Dist<double>::MPI_DCCols & C,double p)
 {	
 	Dist<double>::MPI_DenseVec rowsums = C.Reduce(Row,plus<double>(), 0.0);
@@ -65,10 +64,10 @@ Dist<double>::MPI_DCCols Update_vote(Dist<double>::MPI_DCCols & A,Dist<double>::
 double Set_p(const Dist<double>::MPI_DCCols & C)
 {
 	// Placeholder
-	return 0.0;
+	return 1.0;
 }
 
-Dist<double>::MPI_DCCols Settling_ties(Dist<double>::MPI_DCCols & C)
+/*Dist<double>::MPI_DCCols Settling_ties(Dist<double>::MPI_DCCols & C)
 {
 	// Placeholder
 	C.SaveGathered("11.txt");    
@@ -132,7 +131,9 @@ Dist<double>::MPI_DCCols Settling_ties(Dist<double>::MPI_DCCols & C)
 	C.ReadDistribute(s,0);
 	
 	return C;
-}
+}*/
+
+
 
 int main(int argc, char* argv[])
 {
@@ -185,8 +186,63 @@ int main(int argc, char* argv[])
 			Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
 			T.DimApply(Column, colmaxs, equal_to<double>());
 
-			Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
 
+			//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
+			vector<int> index_temp;
+			vector<int> index;
+			int* p = C.getlocaljc();
+			int nzc = C.getlocalnzc();
+			int ncol = C.getlocalcols();
+			for(int i = 0;i < ncol; i++)
+			{
+				index_temp[i] = numeric_limits<int>::max();
+			}
+			for(int j = 0; j < nzc; j++)
+			{
+				index_temp[p[j]] = myrank;
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
+
+			MPI_AllReduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
+			Dist<double>::DCCols *local_mat = T.seqptr() ;
+			Dist<double>::DCCols::SpColIter colit,colit_lim;
+			Dist<double>::DCCols::SpColIter::NzIter nzit;
+
+
+			for(int k; k< ncol; k++)
+			{
+				if(myrank == index[k])
+				{
+					for(colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)
+					{
+						if(colit.colid() == k)
+						{
+							for(nzit = local_mat->secnz(colit); nzit != local_mat-> endnz; ++nzit)
+							{
+								nzit.value() = 0;
+							}
+							break;
+						}
+					}
+				}
+				else
+				{
+					for(colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)
+					{
+						if(colit.colid() == k)
+						{
+							for(nzit = local_mat->begnz(colit); nzit != local_mat-> endnz; ++nzit)
+							{
+								nzit.value() = 0;
+							}
+						break;
+						}
+					}
+				}
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
+
+			Dist<double>::MPI_DCCols &Cf = T;
 			if (Cf == C)
 				flag = 0;
 			else
@@ -203,4 +259,5 @@ int main(int argc, char* argv[])
 	MPI_Finalize();
 	return 0;
 }
+
 
