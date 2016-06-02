@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+CMAKE_SOURCE_DIR = /home/allenzou/git/CombBLAS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+CMAKE_BINARY_DIR = /home/allenzou/git/CombBLAS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -82,14 +82,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -E cmake_progress_start /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/Applications/CMakeFiles/progress.marks
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles 0
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles /home/allenzou/git/CombBLAS/Applications/CMakeFiles/progress.marks
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/clean
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/clean
 .PHONY : clean
 
 # The main clean target
@@ -98,22 +98,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/preinstall
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/preinstall
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Applications/CMakeFiles/betwcent.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/betwcent.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/betwcent.dir/rule
 .PHONY : Applications/CMakeFiles/betwcent.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ betwcent: Applications/CMakeFiles/betwcent.dir/rule
 
 # fast build rule for target.
 betwcent/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/build
 .PHONY : betwcent/fast
 
 # Convenience name for target.
 Applications/CMakeFiles/dobfs.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/dobfs.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/dobfs.dir/rule
 .PHONY : Applications/CMakeFiles/dobfs.dir/rule
 
 # Convenience name for target.
@@ -136,12 +136,12 @@ dobfs: Applications/CMakeFiles/dobfs.dir/rule
 
 # fast build rule for target.
 dobfs/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/build
 .PHONY : dobfs/fast
 
 # Convenience name for target.
 Applications/CMakeFiles/fbfs.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/fbfs.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/fbfs.dir/rule
 .PHONY : Applications/CMakeFiles/fbfs.dir/rule
 
 # Convenience name for target.
@@ -150,12 +150,12 @@ fbfs: Applications/CMakeFiles/fbfs.dir/rule
 
 # fast build rule for target.
 fbfs/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/build
 .PHONY : fbfs/fast
 
 # Convenience name for target.
 Applications/CMakeFiles/fmis.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/fmis.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/fmis.dir/rule
 .PHONY : Applications/CMakeFiles/fmis.dir/rule
 
 # Convenience name for target.
@@ -164,12 +164,12 @@ fmis: Applications/CMakeFiles/fmis.dir/rule
 
 # fast build rule for target.
 fmis/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/build
 .PHONY : fmis/fast
 
 # Convenience name for target.
 Applications/CMakeFiles/mcl.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/mcl.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/mcl.dir/rule
 .PHONY : Applications/CMakeFiles/mcl.dir/rule
 
 # Convenience name for target.
@@ -178,12 +178,12 @@ mcl: Applications/CMakeFiles/mcl.dir/rule
 
 # fast build rule for target.
 mcl/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/build
 .PHONY : mcl/fast
 
 # Convenience name for target.
 Applications/CMakeFiles/ppcl.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/ppcl.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/ppcl.dir/rule
 .PHONY : Applications/CMakeFiles/ppcl.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ ppcl: Applications/CMakeFiles/ppcl.dir/rule
 
 # fast build rule for target.
 ppcl/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/build
 .PHONY : ppcl/fast
 
 # Convenience name for target.
 Applications/CMakeFiles/tdbfs.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/tdbfs.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/tdbfs.dir/rule
 .PHONY : Applications/CMakeFiles/tdbfs.dir/rule
 
 # Convenience name for target.
@@ -206,112 +206,112 @@ tdbfs: Applications/CMakeFiles/tdbfs.dir/rule
 
 # fast build rule for target.
 tdbfs/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/build
 .PHONY : tdbfs/fast
 
 # target to build an object file
 BetwCent.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/BetwCent.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/BetwCent.o
 .PHONY : BetwCent.o
 
 # target to preprocess a source file
 BetwCent.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/BetwCent.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/BetwCent.i
 .PHONY : BetwCent.i
 
 # target to generate assembly for a file
 BetwCent.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/BetwCent.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/BetwCent.s
 .PHONY : BetwCent.s
 
 # target to build an object file
 DirOptBFS.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/DirOptBFS.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/DirOptBFS.o
 .PHONY : DirOptBFS.o
 
 # target to preprocess a source file
 DirOptBFS.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/DirOptBFS.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/DirOptBFS.i
 .PHONY : DirOptBFS.i
 
 # target to generate assembly for a file
 DirOptBFS.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/DirOptBFS.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/DirOptBFS.s
 .PHONY : DirOptBFS.s
 
 # target to build an object file
 FilteredBFS.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/FilteredBFS.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/FilteredBFS.o
 .PHONY : FilteredBFS.o
 
 # target to preprocess a source file
 FilteredBFS.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/FilteredBFS.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/FilteredBFS.i
 .PHONY : FilteredBFS.i
 
 # target to generate assembly for a file
 FilteredBFS.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/FilteredBFS.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/FilteredBFS.s
 .PHONY : FilteredBFS.s
 
 # target to build an object file
 FilteredMIS.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/FilteredMIS.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/FilteredMIS.o
 .PHONY : FilteredMIS.o
 
 # target to preprocess a source file
 FilteredMIS.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/FilteredMIS.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/FilteredMIS.i
 .PHONY : FilteredMIS.i
 
 # target to generate assembly for a file
 FilteredMIS.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/FilteredMIS.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/FilteredMIS.s
 .PHONY : FilteredMIS.s
 
 # target to build an object file
 MCL.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.o
 .PHONY : MCL.o
 
 # target to preprocess a source file
 MCL.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.i
 .PHONY : MCL.i
 
 # target to generate assembly for a file
 MCL.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.s
 .PHONY : MCL.s
 
 # target to build an object file
 PPCL.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.o
 .PHONY : PPCL.o
 
 # target to preprocess a source file
 PPCL.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.i
 .PHONY : PPCL.i
 
 # target to generate assembly for a file
 PPCL.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.s
 .PHONY : PPCL.s
 
 # target to build an object file
 TopDownBFS.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/TopDownBFS.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/TopDownBFS.o
 .PHONY : TopDownBFS.o
 
 # target to preprocess a source file
 TopDownBFS.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/TopDownBFS.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/TopDownBFS.i
 .PHONY : TopDownBFS.i
 
 # target to generate assembly for a file
 TopDownBFS.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/TopDownBFS.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/TopDownBFS.s
 .PHONY : TopDownBFS.s
 
 # Help Target
@@ -362,6 +362,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

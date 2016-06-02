@@ -38,10 +38,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+CMAKE_SOURCE_DIR = /home/allenzou/git/CombBLAS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+CMAKE_BINARY_DIR = /home/allenzou/git/CombBLAS
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MemoryPoollib.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/MemoryPoollib.dir/flags.make
 
 CMakeFiles/MemoryPoollib.dir/MemoryPool.o: CMakeFiles/MemoryPoollib.dir/flags.make
 CMakeFiles/MemoryPoollib.dir/MemoryPool.o: MemoryPool.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MemoryPoollib.dir/MemoryPool.o"
-	/usr/local/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MemoryPoollib.dir/MemoryPool.o -c /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MemoryPool.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MemoryPoollib.dir/MemoryPool.o -c /home/allenzou/git/CombBLAS/MemoryPool.cpp
 
 CMakeFiles/MemoryPoollib.dir/MemoryPool.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MemoryPoollib.dir/MemoryPool.i"
-	/usr/local/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MemoryPool.cpp > CMakeFiles/MemoryPoollib.dir/MemoryPool.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/allenzou/git/CombBLAS/MemoryPool.cpp > CMakeFiles/MemoryPoollib.dir/MemoryPool.i
 
 CMakeFiles/MemoryPoollib.dir/MemoryPool.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MemoryPoollib.dir/MemoryPool.s"
-	/usr/local/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MemoryPool.cpp -o CMakeFiles/MemoryPoollib.dir/MemoryPool.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/allenzou/git/CombBLAS/MemoryPool.cpp -o CMakeFiles/MemoryPoollib.dir/MemoryPool.s
 
 CMakeFiles/MemoryPoollib.dir/MemoryPool.o.requires:
 .PHONY : CMakeFiles/MemoryPoollib.dir/MemoryPool.o.requires
@@ -101,6 +101,6 @@ CMakeFiles/MemoryPoollib.dir/clean:
 .PHONY : CMakeFiles/MemoryPoollib.dir/clean
 
 CMakeFiles/MemoryPoollib.dir/depend:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MemoryPoollib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS /home/allenzou/git/CombBLAS/CMakeFiles/MemoryPoollib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MemoryPoollib.dir/depend
 

@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/usr/local/bin/mpicxx")
+set(CMAKE_CXX_COMPILER "/usr/bin/mpicxx")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "4.9.3")
@@ -49,8 +49,8 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "mpicxx;mpi;stdc++;m;c")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/local/lib;/usr/lib/gcc/x86_64-linux-gnu/4.9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "mpichcxx;mpich;opa;mpl;rt;cr;pthread;stdc++;m;c")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/x86_64-linux-gnu;/usr/lib/gcc/x86_64-linux-gnu/4.9;/usr/lib;/lib/x86_64-linux-gnu;/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 
 

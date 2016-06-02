@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
-BuildDirectory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+SourceDirectory: /home/allenzou/git/CombBLAS
+BuildDirectory: /home/allenzou/git/CombBLAS
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: aguo-Lenovo-Product
+Site: allenzou-Lenovo-Product
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-mpicxx
@@ -33,7 +33,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS"
+ConfigureCommand: "/usr/bin/cmake" "/home/allenzou/git/CombBLAS"
 MakeCommand: /usr/bin/make -i
 DefaultCTestConfigurationType: Release
 
@@ -58,7 +58,7 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: /usr/local/bin/mpicxx
+Compiler: /usr/bin/mpicxx
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 

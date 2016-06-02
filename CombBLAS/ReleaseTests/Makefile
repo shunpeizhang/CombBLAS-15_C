@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+CMAKE_SOURCE_DIR = /home/allenzou/git/CombBLAS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+CMAKE_BINARY_DIR = /home/allenzou/git/CombBLAS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -82,14 +82,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -E cmake_progress_start /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests/CMakeFiles/progress.marks
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles 0
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles /home/allenzou/git/CombBLAS/ReleaseTests/CMakeFiles/progress.marks
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/clean
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/clean
 .PHONY : clean
 
 # The main clean target
@@ -98,22 +98,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/preinstall
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/preinstall
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/FindSparse.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/FindSparse.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/FindSparse.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/FindSparse.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ FindSparse: ReleaseTests/CMakeFiles/FindSparse.dir/rule
 
 # fast build rule for target.
 FindSparse/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/build
 .PHONY : FindSparse/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/GalerkinNew.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/GalerkinNew.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/GalerkinNew.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/GalerkinNew.dir/rule
 
 # Convenience name for target.
@@ -136,12 +136,12 @@ GalerkinNew: ReleaseTests/CMakeFiles/GalerkinNew.dir/rule
 
 # fast build rule for target.
 GalerkinNew/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/build
 .PHONY : GalerkinNew/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/IndexingTest.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/IndexingTest.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/IndexingTest.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/IndexingTest.dir/rule
 
 # Convenience name for target.
@@ -150,12 +150,12 @@ IndexingTest: ReleaseTests/CMakeFiles/IndexingTest.dir/rule
 
 # fast build rule for target.
 IndexingTest/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/build
 .PHONY : IndexingTest/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/IndexingTiming.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/IndexingTiming.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/IndexingTiming.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/IndexingTiming.dir/rule
 
 # Convenience name for target.
@@ -164,12 +164,12 @@ IndexingTiming: ReleaseTests/CMakeFiles/IndexingTiming.dir/rule
 
 # fast build rule for target.
 IndexingTiming/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/build
 .PHONY : IndexingTiming/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/IteratorTest.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/IteratorTest.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/IteratorTest.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/IteratorTest.dir/rule
 
 # Convenience name for target.
@@ -178,12 +178,12 @@ IteratorTest: ReleaseTests/CMakeFiles/IteratorTest.dir/rule
 
 # fast build rule for target.
 IteratorTest/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/build
 .PHONY : IteratorTest/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/MultTest.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/MultTest.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/MultTest.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/MultTest.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ MultTest: ReleaseTests/CMakeFiles/MultTest.dir/rule
 
 # fast build rule for target.
 MultTest/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/build
 .PHONY : MultTest/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/MultTiming.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/MultTiming.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/MultTiming.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/MultTiming.dir/rule
 
 # Convenience name for target.
@@ -206,12 +206,12 @@ MultTiming: ReleaseTests/CMakeFiles/MultTiming.dir/rule
 
 # fast build rule for target.
 MultTiming/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/build
 .PHONY : MultTiming/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/ReduceTest.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/ReduceTest.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/ReduceTest.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/ReduceTest.dir/rule
 
 # Convenience name for target.
@@ -220,12 +220,12 @@ ReduceTest: ReleaseTests/CMakeFiles/ReduceTest.dir/rule
 
 # fast build rule for target.
 ReduceTest/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/build
 .PHONY : ReduceTest/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/SpAsgnTest.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/SpAsgnTest.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/SpAsgnTest.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/SpAsgnTest.dir/rule
 
 # Convenience name for target.
@@ -234,12 +234,12 @@ SpAsgnTest: ReleaseTests/CMakeFiles/SpAsgnTest.dir/rule
 
 # fast build rule for target.
 SpAsgnTest/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/build
 .PHONY : SpAsgnTest/fast
 
 # Convenience name for target.
 ReleaseTests/CMakeFiles/TransposeTest.dir/rule:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/TransposeTest.dir/rule
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 ReleaseTests/CMakeFiles/TransposeTest.dir/rule
 .PHONY : ReleaseTests/CMakeFiles/TransposeTest.dir/rule
 
 # Convenience name for target.
@@ -248,157 +248,157 @@ TransposeTest: ReleaseTests/CMakeFiles/TransposeTest.dir/rule
 
 # fast build rule for target.
 TransposeTest/fast:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/build
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/build
 .PHONY : TransposeTest/fast
 
 # target to build an object file
 FindSparse.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.o
 .PHONY : FindSparse.o
 
 # target to preprocess a source file
 FindSparse.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.i
 .PHONY : FindSparse.i
 
 # target to generate assembly for a file
 FindSparse.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.s
 .PHONY : FindSparse.s
 
 # target to build an object file
 GalerkinNew.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/GalerkinNew.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/GalerkinNew.o
 .PHONY : GalerkinNew.o
 
 # target to preprocess a source file
 GalerkinNew.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/GalerkinNew.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/GalerkinNew.i
 .PHONY : GalerkinNew.i
 
 # target to generate assembly for a file
 GalerkinNew.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/GalerkinNew.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/GalerkinNew.s
 .PHONY : GalerkinNew.s
 
 # target to build an object file
 IndexingTest.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/IndexingTest.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/IndexingTest.o
 .PHONY : IndexingTest.o
 
 # target to preprocess a source file
 IndexingTest.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/IndexingTest.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/IndexingTest.i
 .PHONY : IndexingTest.i
 
 # target to generate assembly for a file
 IndexingTest.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/IndexingTest.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/IndexingTest.s
 .PHONY : IndexingTest.s
 
 # target to build an object file
 IndexingTiming.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/IndexingTiming.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/IndexingTiming.o
 .PHONY : IndexingTiming.o
 
 # target to preprocess a source file
 IndexingTiming.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/IndexingTiming.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/IndexingTiming.i
 .PHONY : IndexingTiming.i
 
 # target to generate assembly for a file
 IndexingTiming.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/IndexingTiming.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/IndexingTiming.s
 .PHONY : IndexingTiming.s
 
 # target to build an object file
 IteratorTest.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/IteratorTest.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/IteratorTest.o
 .PHONY : IteratorTest.o
 
 # target to preprocess a source file
 IteratorTest.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/IteratorTest.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/IteratorTest.i
 .PHONY : IteratorTest.i
 
 # target to generate assembly for a file
 IteratorTest.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/IteratorTest.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/IteratorTest.s
 .PHONY : IteratorTest.s
 
 # target to build an object file
 MultTest.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/MultTest.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/MultTest.o
 .PHONY : MultTest.o
 
 # target to preprocess a source file
 MultTest.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/MultTest.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/MultTest.i
 .PHONY : MultTest.i
 
 # target to generate assembly for a file
 MultTest.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/MultTest.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/MultTest.s
 .PHONY : MultTest.s
 
 # target to build an object file
 MultTiming.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/MultTiming.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/MultTiming.o
 .PHONY : MultTiming.o
 
 # target to preprocess a source file
 MultTiming.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/MultTiming.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/MultTiming.i
 .PHONY : MultTiming.i
 
 # target to generate assembly for a file
 MultTiming.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/MultTiming.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/MultTiming.s
 .PHONY : MultTiming.s
 
 # target to build an object file
 ReduceTest.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.o
 .PHONY : ReduceTest.o
 
 # target to preprocess a source file
 ReduceTest.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.i
 .PHONY : ReduceTest.i
 
 # target to generate assembly for a file
 ReduceTest.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/ReduceTest.s
 .PHONY : ReduceTest.s
 
 # target to build an object file
 SpAsgnTest.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/SpAsgnTest.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/SpAsgnTest.o
 .PHONY : SpAsgnTest.o
 
 # target to preprocess a source file
 SpAsgnTest.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/SpAsgnTest.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/SpAsgnTest.i
 .PHONY : SpAsgnTest.i
 
 # target to generate assembly for a file
 SpAsgnTest.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/SpAsgnTest.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/SpAsgnTest.s
 .PHONY : SpAsgnTest.s
 
 # target to build an object file
 TransposeTest.o:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/TransposeTest.o
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/TransposeTest.o
 .PHONY : TransposeTest.o
 
 # target to preprocess a source file
 TransposeTest.i:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/TransposeTest.i
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/TransposeTest.i
 .PHONY : TransposeTest.i
 
 # target to generate assembly for a file
 TransposeTest.s:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/TransposeTest.s
+	cd /home/allenzou/git/CombBLAS && $(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/TransposeTest.s
 .PHONY : TransposeTest.s
 
 # Help Target
@@ -461,6 +461,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/aguo/gitsource/CombBLAS-15_C/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/allenzou/git/CombBLAS && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,16 +4,16 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests/FindSparse.cpp" "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.o"
+  "/home/allenzou/git/CombBLAS/ReleaseTests/FindSparse.cpp" "/home/allenzou/git/CombBLAS/ReleaseTests/CMakeFiles/FindSparse.dir/FindSparse.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/CommGridlib.dir/DependInfo.cmake"
-  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MPITypelib.dir/DependInfo.cmake"
-  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MemoryPoollib.dir/DependInfo.cmake"
-  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/Hashlib.dir/DependInfo.cmake"
+  "/home/allenzou/git/CombBLAS/CMakeFiles/CommGridlib.dir/DependInfo.cmake"
+  "/home/allenzou/git/CombBLAS/CMakeFiles/MPITypelib.dir/DependInfo.cmake"
+  "/home/allenzou/git/CombBLAS/CMakeFiles/MemoryPoollib.dir/DependInfo.cmake"
+  "/home/allenzou/git/CombBLAS/CMakeFiles/Hashlib.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

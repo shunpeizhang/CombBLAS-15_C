@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/MemoryPool.cpp" "/home/aguo/gitsource/CombBLAS-15_C/CombBLAS/CMakeFiles/MemoryPoollib.dir/MemoryPool.o"
+  "/home/allenzou/git/CombBLAS/MemoryPool.cpp" "/home/allenzou/git/CombBLAS/CMakeFiles/MemoryPoollib.dir/MemoryPool.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

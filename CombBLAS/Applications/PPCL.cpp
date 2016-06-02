@@ -63,10 +63,10 @@ Dist<double>::MPI_DCCols Update_vote(Dist<double>::MPI_DCCols & A,Dist<double>::
 
 double Set_p(const Dist<double>::MPI_DCCols & C)
 {
-	Dist<double>::MPI_DenseVec colsums = C.Reduce(Row, plus<double>(), 0.0);
+	/*Dist<double>::MPI_DenseVec colsums = C.Reduce(Row, plus<double>(), 0.0);
 	int v = colsums.arr.size();    //此处假设FullyDistVec向量不存储0，且arr.size()为向量中非零值的个数。
-	//未完成函数设定
-	return 1.0；
+	//未完成函数设定*/
+	return 1.0;
 
 }
 
@@ -141,7 +141,7 @@ double Set_p(const Dist<double>::MPI_DCCols & C)
 int main(int argc, char* argv[])
 {
 	int nprocs, myrank;
-	int p;
+	int power;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
 	MPI_Comm_rank(MPI_COMM_WORLD,&myrank);
@@ -191,11 +191,12 @@ int main(int argc, char* argv[])
 
 
 			//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
-			vector<int> index_temp;
-			vector<int> index;
-			int* p = C.getlocaljc();
+			int* p =C.getlocaljc();
 			int nzc = C.getlocalnzc();
 			int ncol = C.getlocalcols();
+			int index_temp[ncol];
+			int index[ncol];
+
 			for(int i = 0;i < ncol; i++)
 			{
 				index_temp[i] = numeric_limits<int>::max();
@@ -206,9 +207,9 @@ int main(int argc, char* argv[])
 			}
 			MPI_Barrier(MPI_COMM_WORLD);
 
-			MPI_AllReduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
-			Dist<double>::DCCols *local_mat = T.seqptr() ;
-			Dist<double>::DCCols::SpColIter colit,colit_lim;
+			MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
+			Dist<double>::DCCols *local_mat = T.seqptr();
+			Dist<double>::DCCols::SpColIter colit;
 			Dist<double>::DCCols::SpColIter::NzIter nzit;
 
 
@@ -220,7 +221,7 @@ int main(int argc, char* argv[])
 					{
 						if(colit.colid() == k)
 						{
-							for(nzit = local_mat->secnz(colit); nzit != local_mat-> endnz; ++nzit)
+							for(nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
 								nzit.value() = 0;
 							}
@@ -234,7 +235,7 @@ int main(int argc, char* argv[])
 					{
 						if(colit.colid() == k)
 						{
-							for(nzit = local_mat->begnz(colit); nzit != local_mat-> endnz; ++nzit)
+							for(nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
 								nzit.value() = 0;
 							}
@@ -245,13 +246,13 @@ int main(int argc, char* argv[])
 			}
 			MPI_Barrier(MPI_COMM_WORLD);
 
-			Dist<double>::MPI_DCCols &Cf = T;
-			if (Cf == C)
+
+			if (T == C)
 				flag = 0;
 			else
-				p =  Set_p(Cf);
-				A = Update_vote(A,Cf,p);
-			C = Cf;
+				power =  Set_p(T);
+				A = Update_vote(A,T,power);
+			C = T;
 
 			double t2=MPI_Wtime();
 			if(myrank == 0)

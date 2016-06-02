@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
-# Build directory: /home/aguo/gitsource/CombBLAS-15_C/CombBLAS
+# Source directory: /home/allenzou/git/CombBLAS
+# Build directory: /home/allenzou/git/CombBLAS
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
