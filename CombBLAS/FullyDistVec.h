@@ -251,6 +251,12 @@ public:
 	using FullyDist<IT,NT,typename CombBLAS::disable_if< CombBLAS::is_boolean<NT>::value, NT >::type>::glen; 
 	using FullyDist<IT,NT,typename CombBLAS::disable_if< CombBLAS::is_boolean<NT>::value, NT >::type>::commGrid; 
 
+	//added by peigang,
+	int getarrsize()
+	{
+		return arr.size();
+	}
+
 private:
 	vector< NT > arr;
 
