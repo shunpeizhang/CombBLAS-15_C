@@ -198,7 +198,7 @@ public:
 	//added by peigang,for getting second nz
 	typename SpColIter::NzIter secnz(const SpColIter & ccol)	//!< Return the second iterator for the nonzeros of the current column
 	{
-		return typename SpColIter::NzIter( dcsc->ir + ccol.colptr() + 1, dcsc->numx + ccol.colptr() );
+		return typename SpColIter::NzIter( dcsc->ir + ccol.colptr() + 1, dcsc->numx + ccol.colptr()+1 );
 	}
 
 

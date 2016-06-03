@@ -223,7 +223,7 @@ int main(int argc, char* argv[])
 						{
 							for(nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
-								nzit.value() = 0;
+								nzit.value() -= 1 ;
 							}
 							break;
 						}
@@ -237,7 +237,7 @@ int main(int argc, char* argv[])
 						{
 							for(nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
-								nzit.value() = 0;
+								nzit.value() -= 1;
 							}
 						break;
 						}
