@@ -1,15 +1,19 @@
-Multiplication_Test 2 4.2805
-Reduction_Test 2 0.093647
-Iterator_Test 2 0.0490824
-Transpose_Test 2 0.337021
-Indexing_Test 2 0.0117815
-SpAsgn_Test 2 0.0138074
-GalerkinNew_Test 2 0.00974202
-FindSparse_Test 2 0.00767207
-BetwCent_Test 2 19.0485
-TopDownBFS_Test 2 1.5893
-DirOptBFS_Test 2 4.42298
-FBFS_Test 2 10.8926
+Multiplication_Test 6 0.798144
+Reduction_Test 6 0.015989
+Iterator_Test 6 0.0143448
+Transpose_Test 6 0.104506
+Indexing_Test 6 0.00177717
+SpAsgn_Test 6 0.00251464
+GalerkinNew_Test 6 0.00231417
+FindSparse_Test 6 0.00125937
+BetwCent_Test 6 6.35771
+TopDownBFS_Test 6 0.542473
+DirOptBFS_Test 6 1.48182
+FBFS_Test 6 3.61037
 FMIS_Test 0 0
+PPCL_Test 0 0
+Mcl_Test 0 0
 ---
 FMIS_Test
+Mcl_Test
+PPCL_Test

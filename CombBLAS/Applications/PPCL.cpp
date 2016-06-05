@@ -43,8 +43,7 @@ public:
 
 void Interpret(const Dist<double>::MPI_DCCols & A)
 {
-	// Placeholder
-	return;
+	A.SaveGathered("ppcl_result.txt");
 }
 
 /*
@@ -223,7 +222,7 @@ int main(int argc, char* argv[])
 						{
 							for(nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
-								nzit.value() -= 1 ;
+								nzit.value() = 0.0 ;
 							}
 							break;
 						}
@@ -237,7 +236,7 @@ int main(int argc, char* argv[])
 						{
 							for(nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
-								nzit.value() -= 1;
+								nzit.value()  = 0.0;
 							}
 						break;
 						}
