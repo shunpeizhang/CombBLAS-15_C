@@ -194,11 +194,13 @@ int main(int argc, char* argv[])
 			Dist<double>::DCCols::SpColIter::NzIter nzit;*/
 			T.DimApply(Column, colmaxs, equal_to<double>());
 
-
 			//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
-			int* p =C.getlocaljc();
-			int nzc = C.getlocalnzc();
-			int ncol = C.getlocalcols();
+			Dist<double>::DCCols *p = T.seqptr();
+			int *q = p->getjc();
+			int nzc = T.getlocalnzc();
+			cout<<"205myrank="<<myrank<<"  nzc="<<nzc<<endl;
+			int ncol = T.getlocalcols();
+			cout<<"207myrank="<<myrank<<"  ncol="<<ncol<<endl;
 			int index_temp[ncol];
 			int index[ncol];
 			printf("%d cols in local c from process %d\n",ncol,myrank);
@@ -209,12 +211,13 @@ int main(int argc, char* argv[])
 			}
 			for(int j = 0; j < nzc; j++)
 			{
-				index_temp[p[j]] = myrank;
+				//cout<<"    rank="<<myrank<<"  no_zero_col="<<q[j];
+				index_temp[q[j]] = myrank;
 			}
 			MPI_Barrier(MPI_COMM_WORLD);
 
 			MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
-			printf("index %d from processor %d\n",index,myrank);
+			printf("index %d from processor %d\n",index[0],myrank);
 
 			for(int k=0; k< ncol; k++)       //每个进程对所获得的新数组遍历
 			{
@@ -226,7 +229,7 @@ int main(int argc, char* argv[])
 						{
 							for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)   //从第二个非零元素开始，置为”0“
 							{
-								//cout<<nzit.value()<<"";
+								//cout<<nzit.value()<<"  ";
 								nzit.value() = 0.0 ;
 							}
 							break;
@@ -251,6 +254,7 @@ int main(int argc, char* argv[])
 			MPI_Barrier(MPI_COMM_WORLD);
 
 			if (T == C)  {flag = 0;}
+			cout<<"flag="<<flag<<endl;
 		/*	else{
 				power =  Set_p(T);
 				A = Update_vote(A,T,power);
