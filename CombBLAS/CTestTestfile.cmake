@@ -17,7 +17,7 @@ ADD_TEST(TopDownBFS_Test "mpirun" "-np" "4" "./Applications/tdbfs" "Force" "17" 
 ADD_TEST(DirOptBFS_Test "mpirun" "-np" "4" "./Applications/dobfs" "17")
 ADD_TEST(FBFS_Test "mpirun" "-np" "4" "./Applications/fbfs" "Gen" "16")
 ADD_TEST(FMIS_Test "mpirun" "-np" "4" "./Applications/fmis" "17")
-ADD_TEST(Mcl_Test "mpirun" "-np" "4" "./Applications/ppcl" "TESTDATA/SCALE168BTW-TRANSBOOL/" "2" "0.00001")
+ADD_TEST(Mcl_Test "mpirun" "-np" "4" "./Applications/mcl" "TESTDATA/SCALE168BTW-TRANSBOOL/" "2" "0.00001")
 ADD_TEST(PPCL_Test "mpirun" "-np" "4" "./Applications/ppcl" "TESTDATA/SCALE168BTW-TRANSBOOL/")
 SUBDIRS(ReleaseTests)
 SUBDIRS(Applications)

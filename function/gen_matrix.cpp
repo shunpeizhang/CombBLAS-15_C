@@ -27,7 +27,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-#include <mpi.h>
+
 
 // These macros should be defined before stdint.h is included
 #ifndef __STDC_CONSTANT_MACROS
@@ -71,7 +71,7 @@ int Gen_Matrix(string filename,int dim )
 
 int main()
 {
-	Gen_Matrix("out",10);
+	Gen_Matrix("out",65536);
 	return 0;
 }
 #endif

@@ -159,6 +159,7 @@ int main(int argc, char* argv[])
 
 	{
 		string directory(argv[1]);
+		cout<<argv[1]<<"  "<<endl;
 		string ifilename1 = "input.txt";
 		string ifilename2 = "input_unit.txt";
 		ifilename1 = directory+"/"+ifilename1;
@@ -172,7 +173,9 @@ int main(int argc, char* argv[])
 		Dist<double>::MPI_DCCols C(fullWorld);
 
 		A.ReadDistribute(ifilename1,0);	// read it from file
+		cout<<A.getnrow()<<" "<<endl;
 		C.ReadDistribute(ifilename2,0);
+		cout<<C.getnrow()<<" "<<endl;
 
 
 		// Reduce (Row): pack along the rows, result is a vector of size n
@@ -186,6 +189,9 @@ int main(int argc, char* argv[])
 			double t1 = MPI_Wtime();
 			Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
 			Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
+			Dist<double>::DCCols *local_mat = T.seqptr();
+/*		Dist<double>::DCCols::SpColIter colit;
+			Dist<double>::DCCols::SpColIter::NzIter nzit;*/
 			T.DimApply(Column, colmaxs, equal_to<double>());
 
 
@@ -195,6 +201,7 @@ int main(int argc, char* argv[])
 			int ncol = C.getlocalcols();
 			int index_temp[ncol];
 			int index[ncol];
+			printf("%d cols in local c from process %d\n",ncol,myrank);
 
 			for(int i = 0;i < ncol; i++)
 			{
@@ -207,52 +214,50 @@ int main(int argc, char* argv[])
 			MPI_Barrier(MPI_COMM_WORLD);
 
 			MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
-			Dist<double>::DCCols *local_mat = T.seqptr();
-			Dist<double>::DCCols::SpColIter colit;
-			Dist<double>::DCCols::SpColIter::NzIter nzit;
+			printf("index %d from processor %d\n",index,myrank);
 
-
-			for(int k; k< ncol; k++)
+			for(int k=0; k< ncol; k++)       //每个进程对所获得的新数组遍历
 			{
-				if(myrank == index[k])
+				if(myrank == index[k])       /*若进程号==第k列对应的数组元素值*/
 				{
-					for(colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)
+					for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中非零列
 					{
-						if(colit.colid() == k)
+						if(colit.colid() == k)   //找到该进程中的第k列
 						{
-							for(nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)
+							for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)   //从第二个非零元素开始，置为”0“
 							{
+								//cout<<nzit.value()<<"";
 								nzit.value() = 0.0 ;
 							}
 							break;
 						}
 					}
 				}
-				else
+				else    //若进程号！=第k列对应元素值
 				{
-					for(colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)
+					for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中所有非零列
 					{
-						if(colit.colid() == k)
+						if(colit.colid() == k)    //如果非零列中有第k列，则将该列元素全置为”0“
 						{
-							for(nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
+							for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
 							{
 								nzit.value()  = 0.0;
 							}
-						break;
+							break;
 						}
 					}
 				}
 			}
 			MPI_Barrier(MPI_COMM_WORLD);
 
-
-			if (T == C)
-				flag = 0;
-			else
+			if (T == C)  {flag = 0;}
+		/*	else{
 				power =  Set_p(T);
 				A = Update_vote(A,T,power);
-			C = T;
+			}*/
 
+			C = T;
+			T.FreeMemory ();
 			double t2=MPI_Wtime();
 			if(myrank == 0)
 				printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
