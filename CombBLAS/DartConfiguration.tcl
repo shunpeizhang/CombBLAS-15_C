@@ -64,7 +64,7 @@ Compiler: /usr/bin/mpicxx
 PurifyCommand: 
 ValgrindCommand: 
 ValgrindCommandOptions: 
-MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
+MemoryCheckCommand: /usr/bin/valgrind
 MemoryCheckCommandOptions: 
 MemoryCheckSuppressionFile: 
 

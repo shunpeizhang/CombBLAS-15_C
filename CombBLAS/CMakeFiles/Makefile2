@@ -1100,9 +1100,9 @@ ReleaseTests/preinstall:
 # Target rules for target ReleaseTests/CMakeFiles/FindSparse.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/FindSparse.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/FindSparse.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/FindSparse.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/FindSparse.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/FindSparse.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/FindSparse.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/FindSparse.dir/build.make ReleaseTests/CMakeFiles/FindSparse.dir/build
@@ -1138,9 +1138,9 @@ clean: ReleaseTests/CMakeFiles/FindSparse.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/GalerkinNew.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/GalerkinNew.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/GalerkinNew.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/GalerkinNew.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/GalerkinNew.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/GalerkinNew.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/GalerkinNew.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/GalerkinNew.dir/build.make ReleaseTests/CMakeFiles/GalerkinNew.dir/build
@@ -1176,9 +1176,9 @@ clean: ReleaseTests/CMakeFiles/GalerkinNew.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/IndexingTest.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/IndexingTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/IndexingTest.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/IndexingTest.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/IndexingTest.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/IndexingTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/IndexingTest.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/IndexingTest.dir/build.make ReleaseTests/CMakeFiles/IndexingTest.dir/build
@@ -1215,9 +1215,9 @@ clean: ReleaseTests/CMakeFiles/IndexingTest.dir/clean
 
 # All Build rule for target.
 ReleaseTests/CMakeFiles/IndexingTiming.dir/all: graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/all
-ReleaseTests/CMakeFiles/IndexingTiming.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/IndexingTiming.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/IndexingTiming.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/IndexingTiming.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/IndexingTiming.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/IndexingTiming.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/IndexingTiming.dir/build.make ReleaseTests/CMakeFiles/IndexingTiming.dir/build
@@ -1253,9 +1253,9 @@ clean: ReleaseTests/CMakeFiles/IndexingTiming.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/IteratorTest.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/IteratorTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/IteratorTest.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/IteratorTest.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/IteratorTest.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/IteratorTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/IteratorTest.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/IteratorTest.dir/build.make ReleaseTests/CMakeFiles/IteratorTest.dir/build
@@ -1291,9 +1291,9 @@ clean: ReleaseTests/CMakeFiles/IteratorTest.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/MultTest.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/MultTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/MultTest.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/MultTest.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/MultTest.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/MultTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/MultTest.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/MultTest.dir/build.make ReleaseTests/CMakeFiles/MultTest.dir/build
@@ -1329,9 +1329,9 @@ clean: ReleaseTests/CMakeFiles/MultTest.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/MultTiming.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/MultTiming.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/MultTiming.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/MultTiming.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/MultTiming.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/MultTiming.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/MultTiming.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/MultTiming.dir/build.make ReleaseTests/CMakeFiles/MultTiming.dir/build
@@ -1367,9 +1367,9 @@ clean: ReleaseTests/CMakeFiles/MultTiming.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/ReduceTest.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/ReduceTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/ReduceTest.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/ReduceTest.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/ReduceTest.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/ReduceTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/ReduceTest.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/ReduceTest.dir/build.make ReleaseTests/CMakeFiles/ReduceTest.dir/build
@@ -1405,9 +1405,9 @@ clean: ReleaseTests/CMakeFiles/ReduceTest.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/SpAsgnTest.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/SpAsgnTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/SpAsgnTest.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/SpAsgnTest.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/SpAsgnTest.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/SpAsgnTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/SpAsgnTest.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/SpAsgnTest.dir/build.make ReleaseTests/CMakeFiles/SpAsgnTest.dir/build
@@ -1443,9 +1443,9 @@ clean: ReleaseTests/CMakeFiles/SpAsgnTest.dir/clean
 # Target rules for target ReleaseTests/CMakeFiles/TransposeTest.dir
 
 # All Build rule for target.
-ReleaseTests/CMakeFiles/TransposeTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
-ReleaseTests/CMakeFiles/TransposeTest.dir/all: CMakeFiles/CommGridlib.dir/all
 ReleaseTests/CMakeFiles/TransposeTest.dir/all: CMakeFiles/MPITypelib.dir/all
+ReleaseTests/CMakeFiles/TransposeTest.dir/all: CMakeFiles/CommGridlib.dir/all
+ReleaseTests/CMakeFiles/TransposeTest.dir/all: CMakeFiles/MemoryPoollib.dir/all
 ReleaseTests/CMakeFiles/TransposeTest.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/depend
 	$(MAKE) -f ReleaseTests/CMakeFiles/TransposeTest.dir/build.make ReleaseTests/CMakeFiles/TransposeTest.dir/build
@@ -1485,7 +1485,6 @@ Applications/all: Applications/CMakeFiles/betwcent.dir/all
 Applications/all: Applications/CMakeFiles/dobfs.dir/all
 Applications/all: Applications/CMakeFiles/fbfs.dir/all
 Applications/all: Applications/CMakeFiles/fmis.dir/all
-Applications/all: Applications/CMakeFiles/mcl.dir/all
 Applications/all: Applications/CMakeFiles/ppcl.dir/all
 Applications/all: Applications/CMakeFiles/tdbfs.dir/all
 .PHONY : Applications/all
@@ -1495,7 +1494,6 @@ Applications/clean: Applications/CMakeFiles/betwcent.dir/clean
 Applications/clean: Applications/CMakeFiles/dobfs.dir/clean
 Applications/clean: Applications/CMakeFiles/fbfs.dir/clean
 Applications/clean: Applications/CMakeFiles/fmis.dir/clean
-Applications/clean: Applications/CMakeFiles/mcl.dir/clean
 Applications/clean: Applications/CMakeFiles/ppcl.dir/clean
 Applications/clean: Applications/CMakeFiles/tdbfs.dir/clean
 .PHONY : Applications/clean
@@ -1508,9 +1506,9 @@ Applications/preinstall:
 # Target rules for target Applications/CMakeFiles/betwcent.dir
 
 # All Build rule for target.
-Applications/CMakeFiles/betwcent.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/betwcent.dir/all: CMakeFiles/CommGridlib.dir/all
 Applications/CMakeFiles/betwcent.dir/all: CMakeFiles/MPITypelib.dir/all
+Applications/CMakeFiles/betwcent.dir/all: CMakeFiles/CommGridlib.dir/all
+Applications/CMakeFiles/betwcent.dir/all: CMakeFiles/MemoryPoollib.dir/all
 Applications/CMakeFiles/betwcent.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/depend
 	$(MAKE) -f Applications/CMakeFiles/betwcent.dir/build.make Applications/CMakeFiles/betwcent.dir/build
@@ -1547,9 +1545,9 @@ clean: Applications/CMakeFiles/betwcent.dir/clean
 
 # All Build rule for target.
 Applications/CMakeFiles/dobfs.dir/all: graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/all
-Applications/CMakeFiles/dobfs.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/dobfs.dir/all: CMakeFiles/CommGridlib.dir/all
 Applications/CMakeFiles/dobfs.dir/all: CMakeFiles/MPITypelib.dir/all
+Applications/CMakeFiles/dobfs.dir/all: CMakeFiles/CommGridlib.dir/all
+Applications/CMakeFiles/dobfs.dir/all: CMakeFiles/MemoryPoollib.dir/all
 Applications/CMakeFiles/dobfs.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/depend
 	$(MAKE) -f Applications/CMakeFiles/dobfs.dir/build.make Applications/CMakeFiles/dobfs.dir/build
@@ -1586,9 +1584,9 @@ clean: Applications/CMakeFiles/dobfs.dir/clean
 
 # All Build rule for target.
 Applications/CMakeFiles/fbfs.dir/all: graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/all
-Applications/CMakeFiles/fbfs.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/fbfs.dir/all: CMakeFiles/CommGridlib.dir/all
 Applications/CMakeFiles/fbfs.dir/all: CMakeFiles/MPITypelib.dir/all
+Applications/CMakeFiles/fbfs.dir/all: CMakeFiles/CommGridlib.dir/all
+Applications/CMakeFiles/fbfs.dir/all: CMakeFiles/MemoryPoollib.dir/all
 Applications/CMakeFiles/fbfs.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/depend
 	$(MAKE) -f Applications/CMakeFiles/fbfs.dir/build.make Applications/CMakeFiles/fbfs.dir/build
@@ -1625,9 +1623,9 @@ clean: Applications/CMakeFiles/fbfs.dir/clean
 
 # All Build rule for target.
 Applications/CMakeFiles/fmis.dir/all: graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/all
-Applications/CMakeFiles/fmis.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/fmis.dir/all: CMakeFiles/CommGridlib.dir/all
 Applications/CMakeFiles/fmis.dir/all: CMakeFiles/MPITypelib.dir/all
+Applications/CMakeFiles/fmis.dir/all: CMakeFiles/CommGridlib.dir/all
+Applications/CMakeFiles/fmis.dir/all: CMakeFiles/MemoryPoollib.dir/all
 Applications/CMakeFiles/fmis.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/depend
 	$(MAKE) -f Applications/CMakeFiles/fmis.dir/build.make Applications/CMakeFiles/fmis.dir/build
@@ -1660,55 +1658,17 @@ clean: Applications/CMakeFiles/fmis.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target Applications/CMakeFiles/mcl.dir
-
-# All Build rule for target.
-Applications/CMakeFiles/mcl.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/mcl.dir/all: CMakeFiles/CommGridlib.dir/all
-Applications/CMakeFiles/mcl.dir/all: CMakeFiles/MPITypelib.dir/all
-Applications/CMakeFiles/mcl.dir/all: CMakeFiles/Hashlib.dir/all
-	$(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/depend
-	$(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles  27
-	@echo "Built target mcl"
-.PHONY : Applications/CMakeFiles/mcl.dir/all
-
-# Include target in all.
-all: Applications/CMakeFiles/mcl.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-Applications/CMakeFiles/mcl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/mcl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/allenzou/git/CombBLAS/CMakeFiles 0
-.PHONY : Applications/CMakeFiles/mcl.dir/rule
-
-# Convenience name for target.
-mcl: Applications/CMakeFiles/mcl.dir/rule
-.PHONY : mcl
-
-# clean rule for target.
-Applications/CMakeFiles/mcl.dir/clean:
-	$(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/clean
-.PHONY : Applications/CMakeFiles/mcl.dir/clean
-
-# clean rule for target.
-clean: Applications/CMakeFiles/mcl.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target Applications/CMakeFiles/ppcl.dir
 
 # All Build rule for target.
 Applications/CMakeFiles/ppcl.dir/all: graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/all
-Applications/CMakeFiles/ppcl.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/ppcl.dir/all: CMakeFiles/CommGridlib.dir/all
 Applications/CMakeFiles/ppcl.dir/all: CMakeFiles/MPITypelib.dir/all
+Applications/CMakeFiles/ppcl.dir/all: CMakeFiles/CommGridlib.dir/all
+Applications/CMakeFiles/ppcl.dir/all: CMakeFiles/MemoryPoollib.dir/all
 Applications/CMakeFiles/ppcl.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/depend
 	$(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles  28
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles  27
 	@echo "Built target ppcl"
 .PHONY : Applications/CMakeFiles/ppcl.dir/all
 
@@ -1741,13 +1701,13 @@ clean: Applications/CMakeFiles/ppcl.dir/clean
 
 # All Build rule for target.
 Applications/CMakeFiles/tdbfs.dir/all: graph500-1.2/generator/CMakeFiles/GraphGenlib.dir/all
-Applications/CMakeFiles/tdbfs.dir/all: CMakeFiles/MemoryPoollib.dir/all
-Applications/CMakeFiles/tdbfs.dir/all: CMakeFiles/CommGridlib.dir/all
 Applications/CMakeFiles/tdbfs.dir/all: CMakeFiles/MPITypelib.dir/all
+Applications/CMakeFiles/tdbfs.dir/all: CMakeFiles/CommGridlib.dir/all
+Applications/CMakeFiles/tdbfs.dir/all: CMakeFiles/MemoryPoollib.dir/all
 Applications/CMakeFiles/tdbfs.dir/all: CMakeFiles/Hashlib.dir/all
 	$(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/depend
 	$(MAKE) -f Applications/CMakeFiles/tdbfs.dir/build.make Applications/CMakeFiles/tdbfs.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles  29
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/allenzou/git/CombBLAS/CMakeFiles  28
 	@echo "Built target tdbfs"
 .PHONY : Applications/CMakeFiles/tdbfs.dir/all
 

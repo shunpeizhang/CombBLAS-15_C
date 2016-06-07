@@ -45,6 +45,5 @@
 /home/allenzou/git/CombBLAS/Applications/CMakeFiles/dobfs.dir
 /home/allenzou/git/CombBLAS/Applications/CMakeFiles/fbfs.dir
 /home/allenzou/git/CombBLAS/Applications/CMakeFiles/fmis.dir
-/home/allenzou/git/CombBLAS/Applications/CMakeFiles/mcl.dir
 /home/allenzou/git/CombBLAS/Applications/CMakeFiles/ppcl.dir
 /home/allenzou/git/CombBLAS/Applications/CMakeFiles/tdbfs.dir

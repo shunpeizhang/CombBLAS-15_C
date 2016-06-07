@@ -167,7 +167,7 @@ int main(int argc, char* argv[])
 
 		MPI_Barrier(MPI_COMM_WORLD);	
 
-		shared_ptr<CommGrid> fullWorld;
+    	shared_ptr<CommGrid> fullWorld;
 		fullWorld.reset( new CommGrid(MPI_COMM_WORLD, 0, 0) );
 		Dist<double>::MPI_DCCols A(fullWorld);	// construct object
 		Dist<double>::MPI_DCCols C(fullWorld);
@@ -186,88 +186,102 @@ int main(int argc, char* argv[])
 		int flag =1;
 		while (flag == 1)
 		{
-			double t1 = MPI_Wtime();
-			Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
-			Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
-			Dist<double>::DCCols *local_mat = T.seqptr();
-/*		Dist<double>::DCCols::SpColIter colit;
-			Dist<double>::DCCols::SpColIter::NzIter nzit;*/
-			T.DimApply(Column, colmaxs, equal_to<double>());
-
-			//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
-			Dist<double>::DCCols *p = T.seqptr();
-			int *q = p->getjc();
-			int nzc = T.getlocalnzc();
-			cout<<"205myrank="<<myrank<<"  nzc="<<nzc<<endl;
-			int ncol = T.getlocalcols();
-			cout<<"207myrank="<<myrank<<"  ncol="<<ncol<<endl;
-			int index_temp[ncol];
-			int index[ncol];
-			printf("%d cols in local c from process %d\n",ncol,myrank);
-
-			for(int i = 0;i < ncol; i++)
 			{
-				index_temp[i] = numeric_limits<int>::max();
-			}
-			for(int j = 0; j < nzc; j++)
-			{
-				//cout<<"    rank="<<myrank<<"  no_zero_col="<<q[j];
-				index_temp[q[j]] = myrank;
-			}
-			MPI_Barrier(MPI_COMM_WORLD);
+			        double t1 = MPI_Wtime();
+					Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
+					Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
+					Dist<double>::DCCols *local_mat = T.seqptr();
+		/*		Dist<double>::DCCols::SpColIter colit;
+					Dist<double>::DCCols::SpColIter::NzIter nzit;*/
+					T.DimApply(Column, colmaxs, equal_to<double>());
 
-			MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
-			printf("index %d from processor %d\n",index[0],myrank);
+					//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
+					Dist<double>::DCCols *p = T.seqptr();
+					int *q = p->getjc();
+					int nzc = T.getlocalnzc();
+					cout<<"205myrank="<<myrank<<"  nzc="<<nzc<<endl;
+					int ncol = T.getlocalcols();
+					cout<<"207myrank="<<myrank<<"  ncol="<<ncol<<endl;
+					int *index_temp = new int[ncol];
+					if(index_temp == NULL){
+						cout<<"can't allocate more memory for index_temp,exit the program.\n";
+						exit(1);
+					}
+					int *index = new int[ncol];
+					if(index == NULL){
+						cout<<"can't allocate more memory for index,exit the program.\n";
+						exit(1);
+					}
+					printf("%d cols in local c from process %d\n",ncol,myrank);
 
-			for(int k=0; k< ncol; k++)       //每个进程对所获得的新数组遍历
-			{
-				if(myrank == index[k])       /*若进程号==第k列对应的数组元素值*/
-				{
-					for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中非零列
+					for(int i = 0;i < ncol; i++)
 					{
-						if(colit.colid() == k)   //找到该进程中的第k列
+						index_temp[i] = numeric_limits<int>::max();
+					}
+					for(int j = 0; j < nzc; j++)
+					{
+						//cout<<"    rank="<<myrank<<"  no_zero_col="<<q[j];
+						index_temp[q[j]] = myrank;
+					}
+					MPI_Barrier(MPI_COMM_WORLD);
+
+					MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
+					printf("index %d from processor %d\n",index[0],myrank);
+
+					for(int k=0; k< ncol; k++)       //每个进程对所获得的新数组遍历
+					{
+						if(myrank == index[k])       /*若进程号==第k列对应的数组元素值*/
 						{
-							for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)   //从第二个非零元素开始，置为”0“
+							for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中非零列
 							{
-								//cout<<nzit.value()<<"  ";
-								nzit.value() = 0.0 ;
+								if(colit.colid() == k)   //找到该进程中的第k列
+								{
+									for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)   //从第二个非零元素开始，置为”0“
+									{
+										//cout<<nzit.value()<<"  ";
+										nzit.value() = 0.0 ;
+									}
+									break;
+								}
 							}
-							break;
+						}
+						else    //若进程号！=第k列对应元素值
+						{
+							for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中所有非零列
+							{
+								if(colit.colid() == k)    //如果非零列中有第k列，则将该列元素全置为”0“
+								{
+									for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
+									{
+										nzit.value()  = 0.0;
+									}
+									break;
+								}
+							}
 						}
 					}
-				}
-				else    //若进程号！=第k列对应元素值
-				{
-					for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中所有非零列
-					{
-						if(colit.colid() == k)    //如果非零列中有第k列，则将该列元素全置为”0“
-						{
-							for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->begnz(colit); nzit != local_mat->endnz(colit); ++nzit)
-							{
-								nzit.value()  = 0.0;
-							}
-							break;
-						}
-					}
-				}
-			}
-			MPI_Barrier(MPI_COMM_WORLD);
+					MPI_Barrier(MPI_COMM_WORLD);
+					delete [ ] index_temp;
+					delete [ ] index;
 
-			if (T == C)  {flag = 0;}
-			cout<<"flag="<<flag<<endl;
-		/*	else{
-				power =  Set_p(T);
-				A = Update_vote(A,T,power);
-			}*/
+					if (T == C)  {flag = 0;}
+					cout<<"flag="<<flag<<endl;
+				/*	else{
+						power =  Set_p(T);
+						A = Update_vote(A,T,power);
+					}*/
 
-			C = T;
-			T.FreeMemory ();
-			double t2=MPI_Wtime();
-			if(myrank == 0)
-				printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
+					C = T;
+					MPI_Barrier(MPI_COMM_WORLD);
+					//T.FreeMemory ();
+					double t2=MPI_Wtime();
+					if(myrank == 0)
+						printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
+		      }
 		}
 		Interpret(C);
 	}
+
 	MPI_Finalize();
 	return 0;
 }

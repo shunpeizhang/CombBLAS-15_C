@@ -168,20 +168,6 @@ fmis/fast:
 .PHONY : fmis/fast
 
 # Convenience name for target.
-Applications/CMakeFiles/mcl.dir/rule:
-	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/mcl.dir/rule
-.PHONY : Applications/CMakeFiles/mcl.dir/rule
-
-# Convenience name for target.
-mcl: Applications/CMakeFiles/mcl.dir/rule
-.PHONY : mcl
-
-# fast build rule for target.
-mcl/fast:
-	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/build
-.PHONY : mcl/fast
-
-# Convenience name for target.
 Applications/CMakeFiles/ppcl.dir/rule:
 	cd /home/allenzou/git/CombBLAS && $(MAKE) -f CMakeFiles/Makefile2 Applications/CMakeFiles/ppcl.dir/rule
 .PHONY : Applications/CMakeFiles/ppcl.dir/rule
@@ -270,21 +256,6 @@ FilteredMIS.s:
 .PHONY : FilteredMIS.s
 
 # target to build an object file
-MCL.o:
-	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.o
-.PHONY : MCL.o
-
-# target to preprocess a source file
-MCL.i:
-	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.i
-.PHONY : MCL.i
-
-# target to generate assembly for a file
-MCL.s:
-	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/MCL.s
-.PHONY : MCL.s
-
-# target to build an object file
 PPCL.o:
 	cd /home/allenzou/git/CombBLAS && $(MAKE) -f Applications/CMakeFiles/ppcl.dir/build.make Applications/CMakeFiles/ppcl.dir/PPCL.o
 .PHONY : PPCL.o
@@ -325,7 +296,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... fbfs"
 	@echo "... fmis"
-	@echo "... mcl"
 	@echo "... ppcl"
 	@echo "... rebuild_cache"
 	@echo "... tdbfs"
@@ -342,9 +312,6 @@ help:
 	@echo "... FilteredMIS.o"
 	@echo "... FilteredMIS.i"
 	@echo "... FilteredMIS.s"
-	@echo "... MCL.o"
-	@echo "... MCL.i"
-	@echo "... MCL.s"
 	@echo "... PPCL.o"
 	@echo "... PPCL.i"
 	@echo "... PPCL.s"

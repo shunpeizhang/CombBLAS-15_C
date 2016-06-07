@@ -710,19 +710,6 @@ fmis/fast:
 .PHONY : fmis/fast
 
 #=============================================================================
-# Target rules for targets named mcl
-
-# Build rule for target.
-mcl: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mcl
-.PHONY : mcl
-
-# fast build rule for target.
-mcl/fast:
-	$(MAKE) -f Applications/CMakeFiles/mcl.dir/build.make Applications/CMakeFiles/mcl.dir/build
-.PHONY : mcl/fast
-
-#=============================================================================
 # Target rules for targets named ppcl
 
 # Build rule for target.
@@ -876,7 +863,6 @@ help:
 	@echo "... dobfs"
 	@echo "... fbfs"
 	@echo "... fmis"
-	@echo "... mcl"
 	@echo "... ppcl"
 	@echo "... tdbfs"
 	@echo "... GraphGenlib"
