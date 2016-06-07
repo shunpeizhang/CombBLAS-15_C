@@ -253,7 +253,7 @@ public:
 	IT getnzc() const { return (nnz == 0) ? 0: dcsc->nzc; }
 	int getnsplit() const { return splits; }
 	//added by peigang,used for PPCL SETTLING TIES
-	IT* getjc() const {return dcsc->jc;}
+	//IT* getjc() const {return dcsc->jc;}
 	
 	ofstream& put(ofstream & outfile) const;
 	ifstream& get(ifstream & infile);

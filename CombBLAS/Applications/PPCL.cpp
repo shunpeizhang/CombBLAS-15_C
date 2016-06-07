@@ -30,17 +30,6 @@ public:
 };
 
 
-
-/*bool Compare(pair<int,int> &left, pair<int,int> &right)
-{
-	if(left.second<right.second)
-		return true;
-	else if(left.second==right.second)
-		return (left.first<=right.first)?1:0;	
-	else
-		return false;
-}*/
-
 void Interpret(const Dist<double>::MPI_DCCols & A)
 {
 	A.SaveGathered("ppcl_result.txt");
@@ -68,73 +57,6 @@ double Set_p(const Dist<double>::MPI_DCCols & C)
 	return 1.0;
 
 }
-
-/*Dist<double>::MPI_DCCols Settling_ties(Dist<double>::MPI_DCCols & C)
-{
-	// Placeholder
-	C.SaveGathered("11.txt");    
-	ifstream inp;
-    inp.open("11.txt");
-    char line[1024];
-    inp.getline(line,1024);
-
-	while(line[0]=='%')
-		inp.getline(line,1024);
-
-    stringstream linestream;
-    linestream<<line;
-    int nrow,ncol,nnz;
-    linestream>>nrow>>ncol>>nnz;
-
-    int precol = -1;
-
-    double val;
-	
-	vector<pair<int,int> > input;
-
-    vector< pair<int,int> > result;
-
-	while(nnz>0 && inp.getline(line,1024))
-    {
-		int row;
-		int col;
-        sscanf(line,"%d %d",&row,&col); 
-		input.push_back(make_pair(row,col));
-        nnz--;
-    }
-	inp.close();
-
-	sort(input.begin(),input.end(),Compare);
-	
-    for(int i=0;i<input.size();i++)
-	{
-        if(precol == -1){
-            precol = input[i].second;
-            result.push_back(make_pair(input[i].first,input[i].second));
-        }
-        else{
-            if( precol != input[i].second){
-                precol = input[i].second;
-                result.push_back(make_pair(input[i].first,input[i].second));
-            }
-        }
-    }
-#if 1
-    ofstream out;
-    out.open("1.txt",ios_base::trunc);
-    out<<nrow<<"  "<<ncol<<"  "<<result.size()<<endl;
-    for(int i=0;i<result.size();i++)
-        out<<result[i].first<<"  "<<result[i].second<<"  1"<<endl;
-    out.close();
-#endif
-
-	C.FreeMemory();
-	string s = "1.txt";
-	C.ReadDistribute(s,0);
-	
-	return C;
-}*/
-
 
 
 int main(int argc, char* argv[])
@@ -184,24 +106,24 @@ int main(int argc, char* argv[])
 		A.DimApply(Row, rowsums, multiplies<double>());	// scale each "Row" with the given vector
 
 		int flag =1;
-		while (flag == 1)
+		int count = 10;
+		while (flag == 1&& count!=0)
 		{
+			--count;
 			{
 			        double t1 = MPI_Wtime();
 					Dist<double>::MPI_DCCols T = PSpGEMM<PTDOUBLEDOUBLE>(C, A);
+					//T.SaveGathered("ppcl_after_pspgemm.txt");
 					Dist<double>::MPI_DenseVec colmaxs = T.Reduce(Column, maximum<double>(), 0.0);
 					Dist<double>::DCCols *local_mat = T.seqptr();
-		/*		Dist<double>::DCCols::SpColIter colit;
-					Dist<double>::DCCols::SpColIter::NzIter nzit;*/
 					T.DimApply(Column, colmaxs, equal_to<double>());
+					T.Prune(bind2nd(less<double>(), numeric_limits<double>::min()));
 
 					//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
-					Dist<double>::DCCols *p = T.seqptr();
-					int *q = p->getjc();
-					int nzc = T.getlocalnzc();
-					cout<<"205myrank="<<myrank<<"  nzc="<<nzc<<endl;
+					int nzc = local_mat->getnzc();
+					cout<<"before Allreduce  "<<"205myrank="<<myrank<<"  localnzc="<<nzc<<endl;
 					int ncol = T.getlocalcols();
-					cout<<"207myrank="<<myrank<<"  ncol="<<ncol<<endl;
+					cout<<"207myrank="<<myrank<<"  localncol="<<ncol<<endl;
 					int *index_temp = new int[ncol];
 					if(index_temp == NULL){
 						cout<<"can't allocate more memory for index_temp,exit the program.\n";
@@ -212,28 +134,32 @@ int main(int argc, char* argv[])
 						cout<<"can't allocate more memory for index,exit the program.\n";
 						exit(1);
 					}
-					printf("%d cols in local c from process %d\n",ncol,myrank);
+					printf("%d cols in local t from process %d\n",ncol,myrank);
 
 					for(int i = 0;i < ncol; i++)
 					{
 						index_temp[i] = numeric_limits<int>::max();
 					}
-					for(int j = 0; j < nzc; j++)
+					Dist<double>::DCCols::SpColIter nzcol = local_mat->begcol();
+					for(Dist<double>::DCCols::SpColIter nzcol=local_mat->begcol(); nzcol != local_mat->endcol(); ++nzcol)
 					{
-						//cout<<"    rank="<<myrank<<"  no_zero_col="<<q[j];
-						index_temp[q[j]] = myrank;
+						//cout<<"    rank="<<myrank<<"  no_zero_colid="<<nzcol.colid();
+						index_temp[nzcol.colid()] = myrank;
 					}
 					MPI_Barrier(MPI_COMM_WORLD);
 
 					MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
 					printf("index %d from processor %d\n",index[0],myrank);
+					//T.SaveGathered("ppcl_BEFORE_SET_TIES.txt");
 
 					for(int k=0; k< ncol; k++)       //每个进程对所获得的新数组遍历
 					{
+						//cout<<"myrank="<<myrank<<"-index[k]="<<index[k]<<"  ";
 						if(myrank == index[k])       /*若进程号==第k列对应的数组元素值*/
 						{
 							for(Dist<double>::DCCols::SpColIter colit=local_mat->begcol(); colit != local_mat->endcol(); ++colit)  //遍历该进程中非零列
 							{
+								//cout<<"myrank="<<myrank<< "colnum="<<colit.colid()<<endl;
 								if(colit.colid() == k)   //找到该进程中的第k列
 								{
 									for(Dist<double>::DCCols::SpColIter::NzIter nzit = local_mat->secnz(colit); nzit != local_mat->endnz(colit); ++nzit)   //从第二个非零元素开始，置为”0“
@@ -261,6 +187,7 @@ int main(int argc, char* argv[])
 						}
 					}
 					MPI_Barrier(MPI_COMM_WORLD);
+					T.Prune(bind2nd(less<double>(), numeric_limits<double>::min()));
 					delete [] index_temp;
 					delete [] index;
 
@@ -273,7 +200,6 @@ int main(int argc, char* argv[])
 
 					C = T;
 					MPI_Barrier(MPI_COMM_WORLD);
-					//T.FreeMemory ();
 					double t2=MPI_Wtime();
 					if(myrank == 0)
 						printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
