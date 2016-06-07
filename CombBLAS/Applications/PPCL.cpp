@@ -261,8 +261,8 @@ int main(int argc, char* argv[])
 						}
 					}
 					MPI_Barrier(MPI_COMM_WORLD);
-					delete [ ] index_temp;
-					delete [ ] index;
+					delete [] index_temp;
+					delete [] index;
 
 					if (T == C)  {flag = 0;}
 					cout<<"flag="<<flag<<endl;
