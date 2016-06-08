@@ -1,0 +1,84 @@
+TESTDATA/SCALE16BTW-TRANSBOOL  
+65536 
+65536 
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=39724
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.530797 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38843
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.508824 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38771
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.507108 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.510435 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.519200 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.515589 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.515558 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.511991 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.511178 seconds elapsed for this iteration
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+before Allreduce  205myrank=0  localnzc=38769
+207myrank=0  localncol=65536
+65536 cols in local t from process 0
+index 0 from processor 0
+COMBBLAS Warning: It is dangerous to create (matrix) objects without specifying the communicator, are you sure you want to create this object in MPI_COMM_WORLD?
+flag=1
+1.516139 seconds elapsed for this iteration
+15.539836 total  seconds 

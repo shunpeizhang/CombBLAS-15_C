@@ -63,9 +63,11 @@ int main(int argc, char* argv[])
 {
 	int nprocs, myrank;
 	int power;
+	int flag =1;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
 	MPI_Comm_rank(MPI_COMM_WORLD,&myrank);
+    double start = MPI_Wtime();
 	typedef PlusTimesSRing<double, double> PTDOUBLEDOUBLE;
 	if(argc < 2)
 	{
@@ -81,13 +83,12 @@ int main(int argc, char* argv[])
 
 	{
 		string directory(argv[1]);
-		cout<<argv[1]<<"  "<<endl;
 		string ifilename1 = "input.txt";
 		string ifilename2 = "input_unit.txt";
 		ifilename1 = directory+"/"+ifilename1;
 		ifilename2 = directory+"/"+ifilename2;
 
-		MPI_Barrier(MPI_COMM_WORLD);	
+		//MPI_Barrier(MPI_COMM_WORLD);
 
     	shared_ptr<CommGrid> fullWorld;
 		fullWorld.reset( new CommGrid(MPI_COMM_WORLD, 0, 0) );
@@ -95,9 +96,9 @@ int main(int argc, char* argv[])
 		Dist<double>::MPI_DCCols C(fullWorld);
 
 		A.ReadDistribute(ifilename1,0);	// read it from file
-		cout<<A.getnrow()<<" "<<endl;
+		//cout<<A.getnrow()<<" "<<endl;
 		C.ReadDistribute(ifilename2,0);
-		cout<<C.getnrow()<<" "<<endl;
+		//cout<<C.getnrow()<<" "<<endl;
 
 
 		// Reduce (Row): pack along the rows, result is a vector of size n
@@ -105,7 +106,6 @@ int main(int argc, char* argv[])
 		rowsums.Apply(safemultinv<double>());
 		A.DimApply(Row, rowsums, multiplies<double>());	// scale each "Row" with the given vector
 
-		int flag =1;
 		int count = 10;
 		while (flag == 1&& count!=0)
 		{
@@ -118,12 +118,14 @@ int main(int argc, char* argv[])
 					Dist<double>::DCCols *local_mat = T.seqptr();
 					T.DimApply(Column, colmaxs, equal_to<double>());
 					T.Prune(bind2nd(less<double>(), numeric_limits<double>::min()));
+					//if(myrank==0)
+					cout<<"before_st_T.nnz="<<T.getnnz()<<endl;
 
 					//Dist<double>::MPI_DCCols Cf  = Settling_ties(T);  //Settling ties in C
 					int nzc = local_mat->getnzc();
-					cout<<"before Allreduce  "<<"205myrank="<<myrank<<"  localnzc="<<nzc<<endl;
+					//cout<<"before Allreduce  "<<"205myrank="<<myrank<<"  localnzc="<<nzc<<endl;
 					int ncol = T.getlocalcols();
-					cout<<"207myrank="<<myrank<<"  localncol="<<ncol<<endl;
+					//cout<<"207myrank="<<myrank<<"  localncol="<<ncol<<endl;
 					int *index_temp = new int[ncol];
 					if(index_temp == NULL){
 						cout<<"can't allocate more memory for index_temp,exit the program.\n";
@@ -134,13 +136,12 @@ int main(int argc, char* argv[])
 						cout<<"can't allocate more memory for index,exit the program.\n";
 						exit(1);
 					}
-					printf("%d cols in local t from process %d\n",ncol,myrank);
+					//printf("%d cols in local t from process %d\n",ncol,myrank);
 
 					for(int i = 0;i < ncol; i++)
 					{
 						index_temp[i] = numeric_limits<int>::max();
 					}
-					Dist<double>::DCCols::SpColIter nzcol = local_mat->begcol();
 					for(Dist<double>::DCCols::SpColIter nzcol=local_mat->begcol(); nzcol != local_mat->endcol(); ++nzcol)
 					{
 						//cout<<"    rank="<<myrank<<"  no_zero_colid="<<nzcol.colid();
@@ -149,7 +150,7 @@ int main(int argc, char* argv[])
 					MPI_Barrier(MPI_COMM_WORLD);
 
 					MPI_Allreduce(index_temp, index, ncol, MPI_INT, MPI_MIN, fullWorld->GetColWorld() );
-					printf("index %d from processor %d\n",index[0],myrank);
+					//printf("index %d from processor %d\n",index[0],myrank);
 					//T.SaveGathered("ppcl_BEFORE_SET_TIES.txt");
 
 					for(int k=0; k< ncol; k++)       //每个进程对所获得的新数组遍历
@@ -188,11 +189,14 @@ int main(int argc, char* argv[])
 					}
 					MPI_Barrier(MPI_COMM_WORLD);
 					T.Prune(bind2nd(less<double>(), numeric_limits<double>::min()));
+					//if(myrank==0)
+					cout<<"after_st_T.nnz="<<T.getnnz()<<endl;
 					delete [] index_temp;
 					delete [] index;
 
 					if (T == C)  {flag = 0;}
-					cout<<"flag="<<flag<<endl;
+					if(myrank == 0)
+						cout<<"flag="<<flag<<endl;
 				/*	else{
 						power =  Set_p(T);
 						A = Update_vote(A,T,power);
@@ -204,11 +208,15 @@ int main(int argc, char* argv[])
 					if(myrank == 0)
 						printf("%.6lf seconds elapsed for this iteration\n", (t2-t1));
 		      }
-		}
-		Interpret(C);
+		}  		//while()
+                Interpret(C);
 	}
 
-	MPI_Finalize();
+    double end = MPI_Wtime();
+	if(myrank == 0)
+		printf("%.6lf total  seconds \n", (end-start));
+
+    MPI_Finalize();
 	return 0;
 }
 
