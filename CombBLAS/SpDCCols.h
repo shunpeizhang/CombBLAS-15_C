@@ -177,14 +177,7 @@ public:
 		else
 			return SpColIter(NULL, NULL);
 	}
-	//added by peigang,for indicate specified col.
-	SpColIter indicol(int k)
-	{
-		if( nnz >0 )
-			return SpColIter(dcsc->cp + k,dcsc->jc +k);
-		else
-			return SpColIter(NULL, NULL);
-	}
+
 
 	typename SpColIter::NzIter begnz(const SpColIter & ccol)	//!< Return the beginning iterator for the nonzeros of the current column
 	{
@@ -252,8 +245,6 @@ public:
 	IT getnnz() const { return nnz; }
 	IT getnzc() const { return (nnz == 0) ? 0: dcsc->nzc; }
 	int getnsplit() const { return splits; }
-	//added by peigang,used for PPCL SETTLING TIES
-	//IT* getjc() const {return dcsc->jc;}
 	
 	ofstream& put(ofstream & outfile) const;
 	ifstream& get(ifstream & infile);

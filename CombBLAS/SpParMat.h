@@ -258,9 +258,6 @@ public:
 	typename DER::LocalIT getlocalnnz() const { return spSeq->getnnz(); }
 	DER & seq() { return (*spSeq); }
 	DER * seqptr() { return spSeq; }
-	//added by peigang,used for  PPCL settling ties
-	//typename DER::LocalIT *getlocaljc() const {return spSeq->getjc(); }
-	//typename DER::LocalIT getlocalnzc() const {return spSeq->getnzc();}
 	typename DER::LocalIT getlocalrank() const {return commGrid->GetRank();}
 
 
